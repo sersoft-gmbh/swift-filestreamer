@@ -1,3 +1,3 @@
 # FileStreamer
 
-A description of this package.
+A simple file streaming implementation in Swift.
