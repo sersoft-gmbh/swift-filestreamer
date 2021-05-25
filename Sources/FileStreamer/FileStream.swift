@@ -1,11 +1,11 @@
 import Dispatch
 import SystemPackage
 
-public final class FileStreamer<Value> {
+public final class FileStream<Value> {
     private typealias FileSource = DispatchSourceRead
 
-    public typealias StateCallback<StateValue> = (FileStreamer, StateValue) throws -> ()
-    public typealias Callback = (FileStreamer, Array<Value>) -> ()
+    public typealias StateCallback<StateValue> = (FileStream, StateValue) throws -> ()
+    public typealias Callback = (FileStream, Array<Value>) -> ()
 
     private enum State {
         case closed
