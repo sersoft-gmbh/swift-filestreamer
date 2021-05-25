@@ -38,7 +38,7 @@ final class FileStreamTests: XCTestCase {
                     eventExpectation.fulfill()
                 }
             }
-            try stream.beginStreaming()
+            stream.beginStreaming()
             DispatchQueue.global().async {
                 for var event in expectedEvents {
                     do {
@@ -52,8 +52,7 @@ final class FileStreamTests: XCTestCase {
             }
             wait(for: [eventExpectation], timeout: 10)
             try writingDesc.close()
-            try stream.endStreaming()
-            try stream.fileDescriptor.close()
+            try stream.fileDescriptor.closeAfter(stream.endStreaming)
         }
         XCTAssertEqual(collectedEvents, expectedEvents)
         XCTAssertLessThanOrEqual(callbackCount, expectedEvents.count)

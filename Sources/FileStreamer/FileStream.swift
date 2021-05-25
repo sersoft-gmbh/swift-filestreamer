@@ -1,8 +1,10 @@
 import Dispatch
 import SystemPackage
 
+/// A file stream that continously reads the generic `Value` type from a given file.
 public struct FileStream<Value> {
     private typealias FileSource = DispatchSourceRead
+    /// The callback that is called whenever values are read from the file.
     public typealias Callback = (FileStream, Array<Value>) -> ()
 
     private enum State {
@@ -43,26 +45,36 @@ public struct FileStream<Value> {
         }
     }
 
+    /// The file descriptor of this stream.
+    /// - Note: The file descriptor is not managed by this type. Opening and closing the file descriptor is the responsibility of the caller.
     public let fileDescriptor: FileDescriptor
 
     private let storage = Storage()
 
+    /// Creates a new stream using the given file descriptor.
+    /// The descriptor should be open for reading!
+    /// - Parameter fileDescriptor: The file descriptor to use.
+    /// - Note: The file descriptor is not managed by this type. Opening and closing the file descriptor is the responsibility of the caller.
     public init(fileDescriptor: FileDescriptor) {
         self.fileDescriptor = fileDescriptor
     }
 
+    /// Adds a callback to be called for read events.
+    /// - Parameter callback: The callback to call for newly read events.
+    /// - Note: Callbacks are executed in the order they are added.
     public func addCallback(_ callback: @escaping Callback) {
         storage.with(\.callbacks) { $0.append(callback) }
     }
 
-    public func beginStreaming() throws {
-        try storage.with(\.state) {
+    /// Starts streaming values from the given file descriptor.
+    public func beginStreaming() {
+        storage.with(\.state) {
             guard case .idle = $0 else { return }
-            $0 = try .streaming(_beginStreaming(from: fileDescriptor))
+            $0 =  .streaming(_beginStreaming(from: fileDescriptor))
         }
     }
 
-    private func _beginStreaming(from fileDesc: FileDescriptor) throws -> FileSource {
+    private func _beginStreaming(from fileDesc: FileDescriptor) -> FileSource {
         let workerQueue = DispatchQueue(label: "de.sersoft.filestreamer.filestream.worker")
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
         let rawSize = MemoryLayout<Value>.size
@@ -97,15 +109,16 @@ public struct FileStream<Value> {
         return source
     }
 
-    public func endStreaming() throws {
-        try storage.with(\.state) {
+    /// Ends streaming. Does not close the file descriptor.
+    public func endStreaming() {
+        storage.with(\.state) {
             guard case .streaming(let source) = $0 else { return }
-            try _endStreaming(of: source)
+            _endStreaming(of: source)
             $0 = .idle
         }
     }
 
-    private func _endStreaming(of source: FileSource) throws {
+    private func _endStreaming(of source: FileSource) {
         source.cancel()
     }
 }
