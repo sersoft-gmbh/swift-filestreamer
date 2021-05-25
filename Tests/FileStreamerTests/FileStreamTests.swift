@@ -30,7 +30,7 @@ final class FileStreamTests: XCTestCase {
             let writingDesc = try FileDescriptor.open(file, .writeOnly,
                                                       options: [.create, .truncate],
                                                       permissions: [.ownerReadWrite, .groupReadWrite])
-            let stream = FileStream<TestValue>(filePath: file)
+            let stream = try FileStream<TestValue>(fileDescriptor: .open(file, .readOnly))
             stream.addCallback { stream, values in
                 callbackCount += 1
                 collectedEvents.append(contentsOf: values)
@@ -52,33 +52,10 @@ final class FileStreamTests: XCTestCase {
             }
             wait(for: [eventExpectation], timeout: 10)
             try writingDesc.close()
-            try stream.close()
+            try stream.endStreaming()
+            try stream.fileDescriptor.close()
         }
         XCTAssertEqual(collectedEvents, expectedEvents)
         XCTAssertLessThanOrEqual(callbackCount, expectedEvents.count)
-    }
-
-    func testStateCallbacks() throws {
-        try withTemporaryDirectory { dir in
-            let file = FilePath(dir.appendingPathComponent("streaming_file").path)
-            try FileDescriptor
-                .open(file, .writeOnly,
-                      options: [.create, .truncate],
-                      permissions: [.ownerReadWrite, .groupReadWrite])
-                .close()
-            let stream = FileStream<TestValue>(filePath: file)
-            let openExpectation = expectation(description: "Waiting for open callback")
-            stream.addOpenCallback { _, _ in
-                openExpectation.fulfill()
-            }
-            let closeExpectation = expectation(description: "Waiting for close callback")
-            stream.addCloseCallback { _, _ in
-                closeExpectation.fulfill()
-            }
-            try stream.open()
-            wait(for: [openExpectation], timeout: 2)
-            try stream.close()
-            wait(for: [closeExpectation], timeout: 2)
-        }
     }
 }
