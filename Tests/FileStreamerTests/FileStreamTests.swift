@@ -30,10 +30,9 @@ final class FileStreamTests: XCTestCase {
             let writingDesc = try FileDescriptor.open(file, .writeOnly,
                                                       options: [.create, .truncate],
                                                       permissions: [.ownerReadWrite, .groupReadWrite])
-            let stream = try FileStream<TestValue>(fileDescriptor: .open(file, .readOnly))
-            stream.addCallback { stream, values in
+            let stream = try FileStream<TestValue>(fileDescriptor: .open(file, .readOnly)) {
                 callbackCount += 1
-                collectedEvents.append(contentsOf: values)
+                collectedEvents.append(contentsOf: $0)
                 if collectedEvents.count >= expectedEvents.count {
                     eventExpectation.fulfill()
                 }

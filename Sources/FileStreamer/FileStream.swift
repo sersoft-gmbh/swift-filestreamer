@@ -5,18 +5,16 @@ import SystemPackage
 public struct FileStream<Value> {
     private typealias FileSource = DispatchSourceRead
     /// The callback that is called whenever values are read from the file.
-    public typealias Callback = (FileStream, Array<Value>) -> ()
+    public typealias Callback = (Array<Value>) -> ()
 
     private enum State {
         case idle
         case streaming(FileSource)
     }
 
-    @dynamicMemberLookup
     private final class Storage {
         struct Values {
             var state: State = .idle
-            var callbacks = Array<Callback>()
         }
 
         private let lock = DispatchQueue(label: "de.sersoft.filestreamer.filestream.storage.lock")
@@ -39,38 +37,31 @@ public struct FileStream<Value> {
         func with<Value, T>(_ keyPath: WritableKeyPath<Values, Value>, do work: (inout Value) throws -> T) rethrows -> T {
             try withValues { try work(&$0[keyPath: keyPath]) }
         }
-
-        subscript<Value>(dynamicMember keyPath: KeyPath<Values, Value>) -> Value {
-            withValues { $0[keyPath: keyPath] }
-        }
     }
 
     /// The file descriptor of this stream.
     /// - Note: The file descriptor is not managed by this type. Opening and closing the file descriptor is the responsibility of the caller.
     public let fileDescriptor: FileDescriptor
 
+    private let callback: Callback
+
     private let storage = Storage()
 
     /// Creates a new stream using the given file descriptor.
     /// The descriptor should be open for reading!
     /// - Parameter fileDescriptor: The file descriptor to use.
+    /// - Parameter callback: The callback to call when values are read.
     /// - Note: The file descriptor is not managed by this type. Opening and closing the file descriptor is the responsibility of the caller.
-    public init(fileDescriptor: FileDescriptor) {
+    public init(fileDescriptor: FileDescriptor, callback: @escaping Callback) {
         self.fileDescriptor = fileDescriptor
-    }
-
-    /// Adds a callback to be called for read events.
-    /// - Parameter callback: The callback to call for newly read events.
-    /// - Note: Callbacks are executed in the order they are added.
-    public func addCallback(_ callback: @escaping Callback) {
-        storage.with(\.callbacks) { $0.append(callback) }
+        self.callback = callback
     }
 
     /// Starts streaming values from the given file descriptor.
     public func beginStreaming() {
         storage.with(\.state) {
             guard case .idle = $0 else { return }
-            $0 =  .streaming(_beginStreaming(from: fileDescriptor))
+            $0 = .streaming(_beginStreaming(from: fileDescriptor))
         }
     }
 
@@ -79,7 +70,7 @@ public struct FileStream<Value> {
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
         let rawSize = MemoryLayout<Value>.size
         var remainingData = 0
-        source.setEventHandler { [unowned storage] in
+        source.setEventHandler { [callback] in
             do {
                 remainingData += Int(source.data)
                 guard case let capacity = remainingData / rawSize, capacity > 0 else { return }
@@ -87,8 +78,7 @@ public struct FileStream<Value> {
                 defer { buffer.deallocate() }
                 let bytesRead = try fileDesc.read(into: UnsafeMutableRawBufferPointer(buffer))
                 if case let noOfValues = bytesRead / rawSize, noOfValues > 0 {
-                    let values = Array(buffer.prefix(noOfValues))
-                    storage.callbacks.forEach { $0(self, values) }
+                    callback(Array(buffer.prefix(noOfValues)))
                 }
                 let leftOverBytes = bytesRead % rawSize
                 remainingData -= bytesRead - leftOverBytes
