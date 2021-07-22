@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - if: runner.os == 'macOS'
-        uses: maxim-lobanov/setup-xcode@v1.2.3
+        uses: maxim-lobanov/setup-xcode@v1.3.0
         with:
           xcode-version: ^12.4
       - name: Install Swift
@@ -61,7 +61,7 @@ jobs:
           - platform=iOS Simulator,OS=latest,name=iPad Pro (11-inch) (2nd generation)
           - platform=tvOS Simulator,OS=latest,name=Apple TV 4K
     steps:
-      - uses: maxim-lobanov/setup-xcode@v1.2.3
+      - uses: maxim-lobanov/setup-xcode@v1.3.0
         with:
           xcode-version: ^12.4
       - uses: actions/checkout@v2.3.4
