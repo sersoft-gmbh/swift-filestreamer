@@ -1,4 +1,4 @@
-import Dispatch
+import Foundation
 import SystemPackage
 
 /// A file stream that continously reads the generic `Value` type from a given file.
@@ -6,6 +6,67 @@ public struct FileStream<Value> {
     private typealias FileSource = DispatchSourceRead
     /// The callback that is called whenever values are read from the file.
     public typealias Callback = (Array<Value>) -> ()
+
+    #if swift(>=5.5) && !os(macOS) // macOS not yet supported in Xcode 13
+    @available(macOS 12, iOS 15, tvOS 15, watchOS 8, *)
+    public struct Sequence: AsyncSequence {
+        public typealias Element = AsyncIterator.Element
+
+        @frozen
+        public struct AsyncIterator: AsyncIteratorProtocol {
+            public typealias Element = Value
+
+            @usableFromInline
+            var _iterator: AsyncStream<Element>.AsyncIterator
+
+            @usableFromInline
+            init(_iterator: AsyncStream<Element>.AsyncIterator) {
+                self._iterator = _iterator
+            }
+
+            @inlinable
+            public mutating func next() async -> Element? {
+                await _iterator.next()
+            }
+        }
+
+        @usableFromInline
+        let _stream: AsyncStream<Element>
+
+        public init(fileDescriptor: FileDescriptor) {
+            _stream = .init(Element.self, { cont in
+                Task<Void, Never> {
+                    guard !Task.isCancelled else { return cont.finish() }
+                    let bytes = FileHandle(fileDescriptor: fileDescriptor.rawValue, closeOnDealloc: false).bytes
+                    let rawSize = MemoryLayout<Value>.size
+                    var buffer = ContiguousArray<UInt8>()
+                    buffer.reserveCapacity(rawSize)
+                    do {
+                        for try await byte in bytes {
+                            buffer.append(byte)
+                            if buffer.count == rawSize {
+                                if case .terminated = buffer.withUnsafeBytes({
+                                    cont.yield($0.load(as: Value.self))
+                                }) {
+                                    break
+                                }
+                                buffer.removeAll(keepingCapacity: true)
+                            }
+                        }
+                    } catch {
+                        print("Reading failed: \(error)")
+                        cont.finish()
+                    }
+                }
+            })
+        }
+
+        @inlinable
+        public func makeAsyncIterator() -> AsyncIterator {
+            .init(_iterator: _stream.makeAsyncIterator())
+        }
+    }
+    #endif
 
     private enum State {
         case idle
