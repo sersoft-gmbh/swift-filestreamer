@@ -7,7 +7,7 @@ public struct FileStream<Value> {
     /// The callback that is called whenever values are read from the file.
     public typealias Callback = (Array<Value>) -> ()
 
-    #if swift(>=5.5) && !os(macOS) // macOS not yet supported in Xcode 13
+    #if compiler(>=5.5) && canImport(_Concurrency) && !os(Linux)
     @available(macOS 12, iOS 15, tvOS 15, watchOS 8, *)
     public struct Sequence: AsyncSequence {
         public typealias Element = AsyncIterator.Element
