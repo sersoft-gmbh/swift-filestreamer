@@ -74,8 +74,8 @@ public struct FileStream<Value> {
             cont.onTermination = { _ in _terminateSource(source) }
 #else
             @Sendable
-            func handleTermination() { _terminateSource(source) }
-            cont.onTermination = { _ in handleTermination() }
+            func handleTermination(with reason: AsyncStream<Element>.Continuation.Termination) { _terminateSource(source) }
+            cont.onTermination = .some(handleTermination)
 #endif
             _activatedSource(source)
         }
