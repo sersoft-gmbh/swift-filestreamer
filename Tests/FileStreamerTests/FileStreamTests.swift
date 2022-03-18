@@ -69,13 +69,8 @@ final class FileStreamTests: XCTestCase {
         try FileManager.default.removeItem(at: newSubdir)
     }
 
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     func testAsyncSimpleStreaming() async throws {
-        guard #available(macOS 10.15, iOS 13, tvOS 14, watchOS 6, *) else {
-            throw XCTSkip("Async / Await not available")
-        }
-
-        executionTimeAllowance = 60 // 1 minute
-
         final actor Coordinator {
             private(set) var shouldStartWriting = false
             private(set) var hasFinishedWriting = false
