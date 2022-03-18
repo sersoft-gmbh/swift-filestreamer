@@ -62,6 +62,7 @@ final class FileStreamTests: XCTestCase {
     }
 
 #if compiler(>=5.5.2) && canImport(_Concurrency)
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     private func withTemporaryDirectoryAsync(do work: (URL) async throws -> ()) async throws {
         let newSubdir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: newSubdir, withIntermediateDirectories: true)
