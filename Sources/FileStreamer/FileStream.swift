@@ -70,7 +70,13 @@ public struct FileStream<Value> {
                     }
                 }
             }
+#if swift(>=5.6)
             cont.onTermination = { _ in _terminateSource(source) }
+#else
+            @Sendable
+            func handleTermination() { _terminateSource(source) }
+            cont.onTermination = { _ in handleTermination() }
+#endif
             _activatedSource(source)
         }
 
