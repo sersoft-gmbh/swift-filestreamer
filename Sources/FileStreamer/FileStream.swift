@@ -7,8 +7,8 @@ public struct FileStream<Value> {
     /// The callback that is called whenever values are read from the file.
     public typealias Callback = (Array<Value>) -> ()
 
-    #if compiler(>=5.5) && canImport(_Concurrency) && !os(Linux)
-    @available(macOS 12, iOS 15, tvOS 15, watchOS 8, *)
+    #if compiler(>=5.5.2) && canImport(_Concurrency)
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     public struct Sequence: AsyncSequence {
         public typealias Element = AsyncIterator.Element
 
@@ -33,31 +33,58 @@ public struct FileStream<Value> {
         @usableFromInline
         let _stream: AsyncStream<Element>
 
-        public init(fileDescriptor: FileDescriptor) {
-            _stream = .init(Element.self, { cont in
-                Task<Void, Never> {
-                    guard !Task.isCancelled else { return cont.finish() }
-                    let bytes = FileHandle(fileDescriptor: fileDescriptor.rawValue, closeOnDealloc: false).bytes
-                    let rawSize = MemoryLayout<Value>.size
-                    var buffer = ContiguousArray<UInt8>()
-                    buffer.reserveCapacity(rawSize)
-                    do {
-                        for try await byte in bytes {
-                            buffer.append(byte)
-                            if buffer.count == rawSize {
-                                if case .terminated = buffer.withUnsafeBytes({
-                                    cont.yield($0.load(as: Value.self))
-                                }) {
-                                    break
-                                }
-                                buffer.removeAll(keepingCapacity: true)
-                            }
-                        }
-                    } catch {
-                        print("Reading failed: \(error)")
-                        cont.finish()
+        // FIXME: This doesn't work as expected yet.
+//        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+//        @available(macOS 12, iOS 15, tvOS 15, watchOS 8, *)
+//        private static func _modernDarwinImpl(for fileDescriptor: FileDescriptor, using cont: AsyncStream<Value>.Continuation) {
+//            Task<Void, Never> {
+//                guard !Task.isCancelled else { return cont.finish() }
+//                let bytes = FileHandle(fileDescriptor: fileDescriptor.rawValue, closeOnDealloc: false).bytes
+//                let rawSize = MemoryLayout<Value>.size
+//                var buffer = ContiguousArray<UInt8>()
+//                buffer.reserveCapacity(rawSize)
+//                do {
+//                    for try await byte in bytes {
+//                        buffer.append(byte)
+//                        if buffer.count == rawSize {
+//                            if case .terminated = buffer.withUnsafeBytes({
+//                                cont.yield($0.load(as: Value.self))
+//                            }) {
+//                                break
+//                            }
+//                            buffer.removeAll(keepingCapacity: true)
+//                        }
+//                    }
+//                } catch {
+//                    print("Reading failed: \(error)")
+//                    cont.finish()
+//                }
+//            }
+//        }
+//        #endif
+        private static func _legacyGCDImpl(for fileDescriptor: FileDescriptor, using cont: AsyncStream<Value>.Continuation) {
+            let source = _inactiveSource(from: fileDescriptor) {
+                for elem in $0 {
+                    if case .terminated = cont.yield(elem) {
+                        break
                     }
                 }
+            }
+            cont.onTermination = { _ in _terminateSource(source) }
+            _activatedSource(source)
+        }
+
+        public init(fileDescriptor: FileDescriptor) {
+            _stream = .init(Element.self, {
+//                #if os(Linux)
+                Self._legacyGCDImpl(for: fileDescriptor, using: $0)
+//                #else
+//                if #available(macOS 12, iOS 15, tvOS 15, watchOS 8, *) {
+//                    Self._modernDarwinImpl(for: fileDescriptor, using: $0)
+//                } else {
+//                    Self._legacyGCDImpl(for: fileDescriptor, using: $0)
+//                }
+//                #endif
             })
         }
 
@@ -127,28 +154,44 @@ public struct FileStream<Value> {
     }
 
     private func _beginStreaming(from fileDesc: FileDescriptor) -> FileSource {
+        Self._activatedSource(Self._inactiveSource(from: fileDesc, informing: callback))
+    }
+
+    /// Ends streaming. Does not close the file descriptor.
+    public func endStreaming() {
+        storage.with(\.state) {
+            guard case .streaming(let source) = $0 else { return }
+            Self._terminateSource(source)
+            $0 = .idle
+        }
+    }
+}
+
+extension FileStream {
+    private static func _inactiveSource(from fileDesc: FileDescriptor, informing callback: @escaping Callback) -> FileSource {
         let workerQueue = DispatchQueue(label: "de.sersoft.filestreamer.filestream.worker")
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
         let rawSize = MemoryLayout<Value>.size
-        var remainingData = 0
-        source.setEventHandler { [callback] in
+        let rawSize64 = UInt64(rawSize)
+        var remainingData: UInt64 = 0
+        source.setEventHandler {
             do {
-                remainingData += Int(source.data)
-                guard case let capacity = remainingData / rawSize, capacity > 0 else { return }
-                let buffer = UnsafeMutableBufferPointer<Value>.allocate(capacity: capacity)
+                remainingData += .init(source.data)
+                guard case let capacity = remainingData / rawSize64, capacity > 0 else { return }
+                let buffer = UnsafeMutableBufferPointer<Value>.allocate(capacity: .init(capacity))
                 defer { buffer.deallocate() }
                 let bytesRead = try fileDesc.read(into: UnsafeMutableRawBufferPointer(buffer))
                 if case let noOfValues = bytesRead / rawSize, noOfValues > 0 {
                     callback(Array(buffer.prefix(noOfValues)))
                 }
                 let leftOverBytes = bytesRead % rawSize
-                remainingData -= bytesRead - leftOverBytes
+                remainingData -= .init(bytesRead - leftOverBytes)
                 if leftOverBytes > 0 {
                     do {
-                        try fileDesc.seek(offset: Int64(-leftOverBytes), from: .current)
+                        try fileDesc.seek(offset: .init(-leftOverBytes), from: .current)
                     } catch {
                         // If we failed to seek, we need to drop the left-over bytes.
-                        remainingData -= leftOverBytes
+                        remainingData -= .init(leftOverBytes)
                         print("Too much data was read from the file handle, but seeking back failed: \(error)")
                     }
                 }
@@ -156,20 +199,16 @@ public struct FileStream<Value> {
                 print("Failed to read from event file: \(error)")
             }
         }
+        return source
+    }
+
+    @discardableResult
+    private static func _activatedSource(_ source: FileSource) -> FileSource {
         source.activate()
         return source
     }
 
-    /// Ends streaming. Does not close the file descriptor.
-    public func endStreaming() {
-        storage.with(\.state) {
-            guard case .streaming(let source) = $0 else { return }
-            _endStreaming(of: source)
-            $0 = .idle
-        }
-    }
-
-    private func _endStreaming(of source: FileSource) {
+    private static func _terminateSource(_ source: FileSource) {
         source.cancel()
     }
 }
