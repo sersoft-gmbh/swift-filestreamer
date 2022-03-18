@@ -145,7 +145,7 @@ final class FileStreamTests: XCTestCase {
                 try writingDesc.close()
             }
             var nanoseconds: UInt64 = 0
-            while await !coordinator.hasCompleted && nanoseconds < 10 * NSEC_PER_SEC {
+            while await !coordinator.hasCompleted && nanoseconds < 10_000_000_000 {
                 try await Task.sleep(nanoseconds: 100)
                 nanoseconds += 100
             }
