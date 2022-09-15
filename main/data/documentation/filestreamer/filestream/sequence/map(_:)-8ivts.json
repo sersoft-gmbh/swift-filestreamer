@@ -166,6 +166,14 @@
           ],
           "tokens" : [
             {
+              "kind" : "attribute",
+              "text" : "@preconcurrency"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "keyword",
               "text" : "func"
             },
@@ -540,9 +548,9 @@
             "let stream = Counter(howHigh: 5)",
             "    .map { romanNumeralDict[$0] ?? \"(unknown)\" }",
             "for await numeral in stream {",
-            "    print(\"\\(numeral) \", terminator: \" \")",
+            "    print(numeral, terminator: \" \")",
             "}",
-            "\/\/ Prints: I  II  III  (unknown)  V"
+            "\/\/ Prints \"I II III (unknown) V\""
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -553,7 +561,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

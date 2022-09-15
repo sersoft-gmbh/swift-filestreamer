@@ -1,0 +1,257 @@
+{
+  "interfaceLanguages" : {
+    "swift" : [
+      {
+        "children" : [
+          {
+            "title" : "Structures",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Structures",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/asynciterator\/next()",
+                        "title" : "func next() async -> FileStream<Value>.Sequence.AsyncIterator.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "title" : "Type Aliases",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/asynciterator\/element",
+                        "title" : "FileStream.Sequence.AsyncIterator.Element",
+                        "type" : "typealias"
+                      }
+                    ],
+                    "path" : "\/documentation\/filestreamer\/filestream\/sequence\/asynciterator",
+                    "title" : "FileStream.Sequence.AsyncIterator",
+                    "type" : "struct"
+                  },
+                  {
+                    "title" : "Initializers",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/sequence\/init(filedescriptor:)",
+                    "title" : "init(fileDescriptor: FileDescriptor)",
+                    "type" : "init"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/sequence\/makeasynciterator()",
+                    "title" : "func makeAsyncIterator() -> FileStream<Value>.Sequence.AsyncIterator",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Type Aliases",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/sequence\/element",
+                    "title" : "FileStream.Sequence.Element",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/allsatisfy(_:)",
+                        "title" : "func allSatisfy((Self.Element) async throws -> Bool) async rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/compactmap(_:)-35cei",
+                        "title" : "func compactMap<ElementOfResult>((Self.Element) async throws -> ElementOfResult?) -> AsyncThrowingCompactMapSequence<Self, ElementOfResult>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/compactmap(_:)-7a2ui",
+                        "title" : "func compactMap<ElementOfResult>((Self.Element) async -> ElementOfResult?) -> AsyncCompactMapSequence<Self, ElementOfResult>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/contains(_:)",
+                        "title" : "func contains(Self.Element) async rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/contains(where:)",
+                        "title" : "func contains(where: (Self.Element) async throws -> Bool) async rethrows -> Bool",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/drop(while:)",
+                        "title" : "func drop(while: (Self.Element) async -> Bool) -> AsyncDropWhileSequence<Self>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/dropfirst(_:)",
+                        "title" : "func dropFirst(Int) -> AsyncDropFirstSequence<Self>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/filter(_:)",
+                        "title" : "func filter((Self.Element) async -> Bool) -> AsyncFilterSequence<Self>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/first(where:)",
+                        "title" : "func first(where: (Self.Element) async throws -> Bool) async rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/flatmap(_:)-1baod",
+                        "title" : "func flatMap<SegmentOfResult>((Self.Element) async -> SegmentOfResult) -> AsyncFlatMapSequence<Self, SegmentOfResult>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/flatmap(_:)-6xpfo",
+                        "title" : "func flatMap<SegmentOfResult>((Self.Element) async throws -> SegmentOfResult) -> AsyncThrowingFlatMapSequence<Self, SegmentOfResult>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/map(_:)-3gocl",
+                        "title" : "func map<Transformed>((Self.Element) async throws -> Transformed) -> AsyncThrowingMapSequence<Self, Transformed>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/map(_:)-8ivts",
+                        "title" : "func map<Transformed>((Self.Element) async -> Transformed) -> AsyncMapSequence<Self, Transformed>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/max()",
+                        "title" : "func max() async rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/max(by:)",
+                        "title" : "func max(by: (Self.Element, Self.Element) async throws -> Bool) async rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/min()",
+                        "title" : "func min() async rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/min(by:)",
+                        "title" : "func min(by: (Self.Element, Self.Element) async throws -> Bool) async rethrows -> Self.Element?",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/prefix(_:)",
+                        "title" : "func prefix(Int) -> AsyncPrefixSequence<Self>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/prefix(while:)",
+                        "title" : "func prefix(while: (Self.Element) async -> Bool) rethrows -> AsyncPrefixWhileSequence<Self>",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/reduce(_:_:)",
+                        "title" : "func reduce<Result>(Result, (Result, Self.Element) async throws -> Result) async rethrows -> Result",
+                        "type" : "method"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/sequence\/reduce(into:_:)",
+                        "title" : "func reduce<Result>(into: Result, (inout Result, Self.Element) async throws -> Void) async rethrows -> Result",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/filestreamer\/filestream\/sequence\/asyncsequence-implementations",
+                    "title" : "AsyncSequence Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/filestreamer\/filestream\/sequence",
+                "title" : "FileStream.Sequence",
+                "type" : "struct"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:callback:)",
+                "title" : "init(fileDescriptor: FileDescriptor, callback: FileStream<Value>.Callback)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/filedescriptor",
+                "title" : "let fileDescriptor: FileDescriptor",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/beginstreaming()",
+                "title" : "func beginStreaming()",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/endstreaming()",
+                "title" : "func endStreaming()",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Aliases",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/callback",
+                "title" : "FileStream.Callback",
+                "type" : "typealias"
+              }
+            ],
+            "path" : "\/documentation\/filestreamer\/filestream",
+            "title" : "FileStream",
+            "type" : "struct"
+          }
+        ],
+        "path" : "\/documentation\/filestreamer",
+        "title" : "FileStreamer",
+        "type" : "module"
+      }
+    ]
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 0
+  }
+}

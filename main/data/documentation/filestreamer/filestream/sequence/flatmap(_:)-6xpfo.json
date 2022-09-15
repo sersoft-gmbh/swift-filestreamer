@@ -182,6 +182,14 @@
           ],
           "tokens" : [
             {
+              "kind" : "attribute",
+              "text" : "@preconcurrency"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "keyword",
               "text" : "func"
             },
@@ -628,12 +636,12 @@
             "            return Counter(howHigh: value)",
             "        }",
             "    for try await number in stream {",
-            "        print (\"\\(number)\", terminator: \" \")",
+            "        print(number, terminator: \" \")",
             "    }",
             "} catch {",
             "    print(error)",
             "}",
-            "\/\/ Prints: 1 1 2 1 2 3 MyError()"
+            "\/\/ Prints \"1 1 2 1 2 3 MyError()\""
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -644,7 +652,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
