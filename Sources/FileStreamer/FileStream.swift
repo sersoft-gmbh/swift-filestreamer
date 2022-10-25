@@ -7,7 +7,6 @@ public struct FileStream<Value> {
     /// The callback that is called whenever values are read from the file.
     public typealias Callback = (Array<Value>) -> ()
 
-    #if compiler(>=5.5.2) && canImport(_Concurrency)
     @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     public struct Sequence: AsyncSequence {
         public typealias Element = AsyncIterator.Element
@@ -99,7 +98,6 @@ public struct FileStream<Value> {
             .init(_iterator: _stream.makeAsyncIterator())
         }
     }
-    #endif
 
     private enum State {
         case idle
