@@ -1,0 +1,459 @@
+{
+  "abstract" : [
+    {
+      "text" : "A file stream that continously reads the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Value",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12FileStreamer0A6StreamV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "FileStream"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FileStreamer"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "FileStream"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "FileStream"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "FileStream"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:callback:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/fileDescriptor"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/beginStreaming()",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/endStreaming()"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Callback"
+      ],
+      "title" : "Type Aliases"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/filestreamer\/filestream"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://FileStreamer/documentation/FileStreamer": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FileStreamer",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream": {
+  "abstract" : [
+    {
+      "text" : "A file stream that continously reads the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Value",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Callback": {
+  "abstract" : [
+    {
+      "text" : "The callback that is called whenever values are read from the file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Callback"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Callback",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Callback"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Callback",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/callback"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Sequence": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Sequence"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Sequence"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Sequence",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/sequence"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/beginStreaming()": {
+  "abstract" : [
+    {
+      "text" : "Starts streaming values from the given file descriptor.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "beginStreaming"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/beginStreaming()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "beginStreaming()",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/beginstreaming()"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/endStreaming()": {
+  "abstract" : [
+    {
+      "text" : "Ends streaming. Does not close the file descriptor.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "endStreaming"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/endStreaming()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "endStreaming()",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/endstreaming()"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/fileDescriptor": {
+  "abstract" : [
+    {
+      "text" : "The file descriptor of this stream.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fileDescriptor"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
+      "text" : "FileDescriptor"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/fileDescriptor",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fileDescriptor",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/filedescriptor"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:callback:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new stream using the given file descriptor.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The descriptor should be open for reading!",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "fileDescriptor"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
+      "text" : "FileDescriptor"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "callback"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+      "text" : "FileStream"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV8Callbacka",
+      "text" : "Callback"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:callback:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(fileDescriptor:callback:)",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:callback:)"
+}
+}
+}

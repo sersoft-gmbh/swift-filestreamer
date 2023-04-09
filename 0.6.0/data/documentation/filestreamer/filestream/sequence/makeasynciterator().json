@@ -1,0 +1,372 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence\/makeAsyncIterator()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12FileStreamer0A6StreamV8SequenceV17makeAsyncIteratorAE0fG0Vyx__GyF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "makeAsyncIterator"
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+        "text" : "FileStream"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Value"
+      },
+      {
+        "kind" : "text",
+        "text" : ">."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV",
+        "text" : "Sequence"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV13AsyncIteratorV",
+        "text" : "AsyncIterator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FileStreamer"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "makeAsyncIterator()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "makeAsyncIterator"
+            },
+            {
+              "kind" : "text",
+              "text" : "() -> "
+            },
+            {
+              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+              "text" : "FileStream"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">."
+            },
+            {
+              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV",
+              "text" : "Sequence"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence\/AsyncIterator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV13AsyncIteratorV",
+              "text" : "AsyncIterator"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/filestreamer\/filestream\/sequence\/makeasynciterator()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://FileStreamer/documentation/FileStreamer": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FileStreamer",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream": {
+  "abstract" : [
+    {
+      "text" : "A file stream that continously reads the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Value",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Sequence": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Sequence"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Sequence"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Sequence",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/sequence"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Sequence/AsyncIterator": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence\/AsyncIterator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Sequence.AsyncIterator",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/sequence\/asynciterator"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Sequence/makeAsyncIterator()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "makeAsyncIterator"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+      "text" : "FileStream"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV",
+      "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV8SequenceV13AsyncIteratorV",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence\/makeAsyncIterator()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "makeAsyncIterator()",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/sequence\/makeasynciterator()"
+}
+}
+}

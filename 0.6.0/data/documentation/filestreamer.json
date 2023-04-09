@@ -1,0 +1,110 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "FileStreamer",
+    "modules" : [
+      {
+        "name" : "FileStreamer"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "FileStreamer"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream"
+      ],
+      "title" : "Structures"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/filestreamer"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://FileStreamer/documentation/FileStreamer": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FileStreamer",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream": {
+  "abstract" : [
+    {
+      "text" : "A file stream that continously reads the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Value",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream"
+}
+}
+}
