@@ -1,4 +1,4 @@
-import Foundation
+import Dispatch
 import SystemPackage
 
 /// An async sequence that continously streams the generic `Value` type from a given file.
@@ -89,10 +89,8 @@ extension FileStream {
 }
 
 extension FileStream {
-    private typealias FileSource = DispatchSourceRead
-
     private static func _inactiveSource(from fileDesc: FileDescriptor,
-                                        informing callback: @escaping (Result<Array<Element>, any Error>) -> ()) -> some FileSource {
+                                        informing callback: @escaping (Result<Array<Element>, any Error>) -> ()) -> any DispatchSourceRead {
         let workerQueue = DispatchQueue(label: "de.sersoft.filestreamer.filestream.worker")
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
         let rawSize = MemoryLayout<Value>.size
@@ -126,7 +124,7 @@ extension FileStream {
         return source
     }
 
-    private static func _terminateSource(_ source: some FileSource) {
+    private static func _terminateSource(_ source: some DispatchSourceRead) {
         source.cancel()
     }
 }
