@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "A file stream that continously reads the generic ",
+      "text" : "An async sequence that continously streams the generic ",
       "type" : "text"
     },
     {
@@ -98,6 +98,16 @@
       "kind" : "declarations"
     }
   ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/Sci"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 3,
@@ -109,34 +119,35 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior"
       ],
       "title" : "Structures"
     },
     {
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:callback:)"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)"
       ],
       "title" : "Initializers"
     },
     {
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/fileDescriptor"
-      ],
-      "title" : "Instance Properties"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/beginStreaming()",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/endStreaming()"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()"
       ],
       "title" : "Instance Methods"
     },
     {
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Callback"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Element"
       ],
       "title" : "Type Aliases"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncSequence-Implementations"
+      ],
+      "title" : "Default Implementations"
     }
   ],
   "variants" : [
@@ -153,6 +164,11 @@
   ]
 , 
 "references": {
+"doc://FileStreamer/Sci": {
+  "identifier" : "doc:\/\/FileStreamer\/Sci",
+  "title" : "_Concurrency.AsyncSequence",
+  "type" : "unresolvable"
+},
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
 
@@ -167,7 +183,7 @@
 "doc://FileStreamer/documentation/FileStreamer/FileStream": {
   "abstract" : [
     {
-      "text" : "A file stream that continously reads the generic ",
+      "text" : "An async sequence that continously streams the generic ",
       "type" : "text"
     },
     {
@@ -206,41 +222,7 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/Callback": {
-  "abstract" : [
-    {
-      "text" : "The callback that is called whenever values are read from the file.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "typealias"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Callback"
-    }
-  ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Callback",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Callback"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "FileStream.Callback",
-  "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/callback"
-},
-"doc://FileStreamer/documentation/FileStreamer/FileStream/Sequence": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator": {
   "abstract" : [
 
   ],
@@ -255,33 +237,41 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Sequence"
+      "text" : "AsyncIterator"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Sequence",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Sequence"
+      "text" : "AsyncIterator"
     }
   ],
   "role" : "symbol",
-  "title" : "FileStream.Sequence",
+  "title" : "FileStream.AsyncIterator",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/sequence"
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/beginStreaming()": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncSequence-Implementations": {
   "abstract" : [
-    {
-      "text" : "Starts streaming values from the given file descriptor.",
-      "type" : "text"
-    }
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncSequence-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "AsyncSequence Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asyncsequence-implementations"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Element": {
+  "abstract" : [
+
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "func"
+      "text" : "typealias"
     },
     {
       "kind" : "text",
@@ -289,31 +279,33 @@
     },
     {
       "kind" : "identifier",
-      "text" : "beginStreaming"
-    },
-    {
-      "kind" : "text",
-      "text" : "()"
+      "text" : "Element"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/beginStreaming()",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Element",
   "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Element"
+    }
+  ],
   "role" : "symbol",
-  "title" : "beginStreaming()",
+  "title" : "FileStream.Element",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/beginstreaming()"
+  "url" : "\/documentation\/filestreamer\/filestream\/element"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/endStreaming()": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
   "abstract" : [
     {
-      "text" : "Ends streaming. Does not close the file descriptor.",
+      "text" : "Defines how failures should be handled.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "func"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -321,71 +313,25 @@
     },
     {
       "kind" : "identifier",
-      "text" : "endStreaming"
-    },
-    {
-      "kind" : "text",
-      "text" : "()"
+      "text" : "FailureBehavior"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/endStreaming()",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
   "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "endStreaming()",
-  "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/endstreaming()"
-},
-"doc://FileStreamer/documentation/FileStreamer/FileStream/fileDescriptor": {
-  "abstract" : [
-    {
-      "text" : "The file descriptor of this stream.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "let"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
+  "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "fileDescriptor"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
-      "text" : "FileDescriptor"
+      "text" : "FailureBehavior"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/fileDescriptor",
-  "kind" : "symbol",
   "role" : "symbol",
-  "title" : "fileDescriptor",
+  "title" : "FileStream.FailureBehavior",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/filedescriptor"
+  "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:callback:)": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:failureBehavior:)": {
   "abstract" : [
-    {
-      "text" : "Creates a new stream using the given file descriptor.",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "The descriptor should be open for reading!",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -415,7 +361,7 @@
     },
     {
       "kind" : "externalParam",
-      "text" : "callback"
+      "text" : "failureBehavior"
     },
     {
       "kind" : "text",
@@ -440,20 +386,71 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV8Callbacka",
-      "text" : "Callback"
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
+      "text" : "FailureBehavior"
     },
     {
       "kind" : "text",
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:callback:)",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(fileDescriptor:callback:)",
+  "title" : "init(fileDescriptor:failureBehavior:)",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:callback:)"
+  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/makeAsyncIterator()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "makeAsyncIterator"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+      "text" : "FileStream"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "makeAsyncIterator()",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/makeasynciterator()"
 }
 }
 }

@@ -67,7 +67,7 @@
 "doc://FileStreamer/documentation/FileStreamer/FileStream": {
   "abstract" : [
     {
-      "text" : "A file stream that continously reads the generic ",
+      "text" : "An async sequence that continously streams the generic ",
       "type" : "text"
     },
     {
