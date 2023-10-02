@@ -89,10 +89,10 @@ final class FileStreamTests: XCTestCase {
                 await coordinator.didFinishWriting()
                 try writingDesc.close()
             }
-            var waitedDuration: Duration = .seconds(0)
-            while await !coordinator.hasCompleted && waitedDuration < .seconds(10) {
+            var waitedNanoseconds: UInt64 = 0
+            while await !coordinator.hasCompleted && waitedNanoseconds < 10_000_000_000 {
                 try await Task.sleep(nanoseconds: 100)
-                waitedDuration += .nanoseconds(100)
+                waitedNanoseconds += 100
             }
             if await !coordinator.hasFinishedWriting {
                 writeTask.cancel()
