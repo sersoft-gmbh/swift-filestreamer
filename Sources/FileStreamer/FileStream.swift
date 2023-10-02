@@ -50,13 +50,11 @@ public struct FileStream<Value>: AsyncSequence {
 
     @usableFromInline
     let _stream: Stream
-    public let failureBehavior: FailureBehavior
 
     public init(fileDescriptor: FileDescriptor, failureBehavior: FailureBehavior = .`throw`) {
         _stream = .init(Element.self, {
             Self._gcdImplementation(for: fileDescriptor, using: $0, handlingFailuresWith: failureBehavior)
         })
-        self.failureBehavior = failureBehavior
     }
 
     @inlinable
