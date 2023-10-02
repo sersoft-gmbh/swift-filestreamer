@@ -13,64 +13,14 @@ final class FileStreamTests: XCTestCase {
         }
     }
 
-    private func withTemporaryDirectory(do work: (URL) throws -> ()) throws {
-        let newSubdir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try FileManager.default.createDirectory(at: newSubdir, withIntermediateDirectories: true)
-        try work(newSubdir)
-        try FileManager.default.removeItem(at: newSubdir)
-    }
-
-    func testSimpleStreaming() throws {
-        let eventExpectation = expectation(description: "waiting for events")
-        let expectedEvents: Array<TestValue> = [
-            TestValue(bool: false, int: 1, dbl: 4.3),
-            TestValue(bool: true, int: 2, dbl: 3.2),
-            TestValue(bool: false, int: 42, dbl: 10.25),
-        ]
-        var collectedEvents: Array<TestValue> = []
-        var callbackCount = 0
-        try withTemporaryDirectory { dir in
-            let file = FilePath(dir.appendingPathComponent("streaming_file").path)
-            let writingDesc = try FileDescriptor.open(file, .writeOnly,
-                                                      options: [.create, .truncate],
-                                                      permissions: [.ownerReadWrite, .groupReadWrite])
-            let stream = try FileStream<TestValue>(fileDescriptor: .open(file, .readOnly)) {
-                callbackCount += 1
-                collectedEvents.append(contentsOf: $0)
-                if collectedEvents.count >= expectedEvents.count {
-                    eventExpectation.fulfill()
-                }
-            }
-            stream.beginStreaming()
-            DispatchQueue.global().async {
-                for var event in expectedEvents {
-                    do {
-                        try withUnsafeBytes(of: &event) {
-                            XCTAssertEqual(try writingDesc.write($0), MemoryLayout<TestValue>.size)
-                        }
-                    } catch {
-                        XCTFail("writing failed: \(error)")
-                    }
-                }
-            }
-            wait(for: [eventExpectation], timeout: 10)
-            try writingDesc.close()
-            try stream.fileDescriptor.closeAfter(stream.endStreaming)
-        }
-        XCTAssertEqual(collectedEvents, expectedEvents)
-        XCTAssertLessThanOrEqual(callbackCount, expectedEvents.count)
-    }
-
-    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-    private func withTemporaryDirectoryAsync(do work: (URL) async throws -> ()) async throws {
+    private func withTemporaryDirectory(do work: (URL) async throws -> ()) async throws {
         let newSubdir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: newSubdir, withIntermediateDirectories: true)
         try await work(newSubdir)
         try FileManager.default.removeItem(at: newSubdir)
     }
 
-    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-    func testAsyncSimpleStreaming() async throws {
+    func testSimpleStreaming() async throws {
         final actor Coordinator {
             private(set) var shouldStartWriting = false
             private(set) var hasFinishedWriting = false
@@ -98,19 +48,19 @@ final class FileStreamTests: XCTestCase {
         ]
 
         var collectedEvents = Array<TestValue>()
-        try await withTemporaryDirectoryAsync { dir in
+        try await withTemporaryDirectory { dir in
             let file = FilePath(dir.appendingPathComponent("streaming_file").path)
             let writingDesc = try FileDescriptor.open(file, .writeOnly,
                                                       options: [.create, .truncate],
                                                       permissions: [.ownerReadWrite, .groupReadWrite])
             let readingDesc = try FileDescriptor.open(file, .readOnly)
             let coordinator = Coordinator()
-            let collectionTask = Task<(Array<TestValue>, Bool), Never>.detached {
-                let seq = FileStream<TestValue>.Sequence(fileDescriptor: readingDesc)
+            let collectionTask = Task<(Array<TestValue>, Bool), any Error>.detached {
+                let seq = FileStream<TestValue>(fileDescriptor: readingDesc)
                 var collectedEvents = Array<TestValue>()
                 var didReachEnd = false
-                Task { await coordinator.readyForReceiving() }
-                for await elem in seq {
+                await coordinator.readyForReceiving()
+                for try await elem in seq {
                     collectedEvents.append(elem)
                     if await coordinator.hasFinishedWriting && collectedEvents.count >= expectedEvents.count {
                         didReachEnd = true
@@ -139,10 +89,10 @@ final class FileStreamTests: XCTestCase {
                 await coordinator.didFinishWriting()
                 try writingDesc.close()
             }
-            var nanoseconds: UInt64 = 0
-            while await !coordinator.hasCompleted && nanoseconds < 10_000_000_000 {
+            var waitedDuration: Duration = .seconds(0)
+            while await !coordinator.hasCompleted && waitedDuration < .seconds(10) {
                 try await Task.sleep(nanoseconds: 100)
-                nanoseconds += 100
+                waitedDuration += .nanoseconds(100)
             }
             if await !coordinator.hasFinishedWriting {
                 writeTask.cancel()
@@ -153,7 +103,7 @@ final class FileStreamTests: XCTestCase {
                 collectionTask.cancel()
                 XCTFail("Read didn't finish")
             }
-            let (c, didReachEnd) = await collectionTask.value
+            let (c, didReachEnd) = try await collectionTask.value
             collectedEvents = c
             XCTAssertTrue(didReachEnd)
             XCTAssertFalse(collectionTask.isCancelled)
