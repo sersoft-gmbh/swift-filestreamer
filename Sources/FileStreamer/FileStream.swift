@@ -13,7 +13,7 @@ public struct FileStream<Value>: AsyncSequence {
             try handler(error)
         }
 
-        /// The error is handled by the given closure. Throwing from the closure wiill
+        /// The error is handled by the given closure. Throwing from the closure will terminate the sequence.
         public static func custom(_ handler: @escaping @Sendable (any Error) throws -> ()) -> Self {
             .init(handler: handler)
         }
@@ -21,7 +21,7 @@ public struct FileStream<Value>: AsyncSequence {
         /// Any error is thrown from the sequence (terminating it).
         public static var `throw`: Self { .init { throw $0 } }
 
-        /// Errors are simply printed.
+        /// Errors are simply printed. The sequence will continue afterwards.
         public static var print: Self {
             .init { Swift.print("\(FileStream.self): An error occurred: \($0)") }
         }
