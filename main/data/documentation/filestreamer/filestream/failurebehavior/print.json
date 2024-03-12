@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Errors are simply printed.",
+      "text" : "Errors are simply printed. The sequence will continue afterwards.",
       "type" : "text"
     }
   ],
@@ -268,7 +268,7 @@
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior/print": {
   "abstract" : [
     {
-      "text" : "Errors are simply printed.",
+      "text" : "Errors are simply printed. The sequence will continue afterwards.",
       "type" : "text"
     }
   ],

@@ -216,7 +216,7 @@
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior/custom(_:)": {
   "abstract" : [
     {
-      "text" : "The error is handled by the given closure. Throwing from the closure wiill",
+      "text" : "The error is handled by the given closure. Throwing from the closure will terminate the sequence.",
       "type" : "text"
     }
   ],
@@ -243,7 +243,7 @@
     },
     {
       "kind" : "text",
-      "text" : "(("
+      "text" : "((any "
     },
     {
       "kind" : "typeIdentifier",
@@ -295,7 +295,7 @@
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior/print": {
   "abstract" : [
     {
-      "text" : "Errors are simply printed.",
+      "text" : "Errors are simply printed. The sequence will continue afterwards.",
       "type" : "text"
     }
   ],

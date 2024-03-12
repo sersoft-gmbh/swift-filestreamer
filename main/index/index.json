@@ -60,7 +60,7 @@
                   },
                   {
                     "path" : "\/documentation\/filestreamer\/filestream\/failurebehavior\/custom(_:)",
-                    "title" : "static func custom((Error) throws -> ()) -> FileStream<Value>.FailureBehavior",
+                    "title" : "static func custom((any Error) throws -> ()) -> FileStream<Value>.FailureBehavior",
                     "type" : "method"
                   }
                 ],
