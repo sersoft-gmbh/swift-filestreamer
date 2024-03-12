@@ -101,6 +101,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
+        "doc:\/\/FileStreamer\/s8SendableP",
         "doc:\/\/FileStreamer\/Sci"
       ],
       "kind" : "relationships",
@@ -451,6 +452,11 @@
   "title" : "makeAsyncIterator()",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/makeasynciterator()"
+},
+"doc://FileStreamer/s8SendableP": {
+  "identifier" : "doc:\/\/FileStreamer\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
 }
 }
 }
