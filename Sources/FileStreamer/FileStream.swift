@@ -63,6 +63,8 @@ public struct FileStream<Value>: AsyncSequence {
     }
 }
 
+extension FileStream: Sendable where Value: Sendable {}
+
 extension FileStream {
     private static func _gcdImplementation(for fileDescriptor: FileDescriptor,
                                            using cont: Stream.Continuation,
