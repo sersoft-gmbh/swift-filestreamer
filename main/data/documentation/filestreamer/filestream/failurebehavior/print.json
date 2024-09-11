@@ -74,6 +74,10 @@
         "name" : "FileStreamer"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "FileStream.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L25"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

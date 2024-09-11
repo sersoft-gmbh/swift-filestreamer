@@ -39,6 +39,10 @@
         "text" : "AsyncIterator"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "FileStream.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L34"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
