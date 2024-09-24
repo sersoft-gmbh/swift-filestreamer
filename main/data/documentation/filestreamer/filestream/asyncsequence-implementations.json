@@ -32,6 +32,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Methods",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/allSatisfy(_:)",
@@ -43,8 +44,10 @@
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/dropFirst(_:)",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/filter(_:)",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/first(where:)",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-63jd2",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-3sfwa",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-4xbq6",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-81gg2",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-9tzwp",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/map(_:)-4cu3b",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/map(_:)-6yiay",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/max()",
@@ -1057,7 +1060,7 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/first(where:)"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-63jd2": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-3sfwa": {
   "abstract" : [
     {
       "text" : "Creates an asynchronous sequence that concatenates the results of calling",
@@ -1156,12 +1159,118 @@
       "text" : ">"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-63jd2",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-3sfwa",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "flatMap(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-63jd2"
+  "url" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-3sfwa"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-4xbq6": {
+  "abstract" : [
+    {
+      "text" : "Creates an asynchronous sequence that concatenates the results of calling",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the given transformation with each element of this sequence.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "flatMap"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sci7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12_Concurrency20AsyncFlatMapSequenceV",
+      "text" : "AsyncFlatMapSequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-4xbq6",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "flatMap(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-4xbq6"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-81gg2": {
   "abstract" : [
@@ -1284,6 +1393,112 @@
   "title" : "flatMap(_:)",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-81gg2"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-9tzwp": {
+  "abstract" : [
+    {
+      "text" : "Creates an asynchronous sequence that concatenates the results of calling",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the given transformation with each element of this sequence.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "flatMap"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sci7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12_Concurrency20AsyncFlatMapSequenceV",
+      "text" : "AsyncFlatMapSequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "SegmentOfResult"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/flatMap(_:)-9tzwp",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "flatMap(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-9tzwp"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/map(_:)-4cu3b": {
   "abstract" : [

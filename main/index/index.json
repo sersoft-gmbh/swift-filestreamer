@@ -1,4 +1,7 @@
 {
+  "includedArchiveIdentifiers" : [
+    "FileStreamer"
+  ],
   "interfaceLanguages" : {
     "swift" : [
       {
@@ -25,6 +28,11 @@
                     "type" : "method"
                   },
                   {
+                    "path" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-80ms",
+                    "title" : "func next(isolation: isolated (any Actor)?) async throws -> Value?",
+                    "type" : "method"
+                  },
+                  {
                     "title" : "Type Aliases",
                     "type" : "groupMarker"
                   },
@@ -32,6 +40,31 @@
                     "path" : "\/documentation\/filestreamer\/filestream\/asynciterator\/element",
                     "title" : "FileStream.AsyncIterator.Element",
                     "type" : "typealias"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/asynciterator\/failure",
+                    "title" : "FileStream.AsyncIterator.Failure",
+                    "type" : "typealias"
+                  },
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Methods",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-53i08",
+                        "title" : "func next(isolation: isolated (any Actor)?) async throws(Self.Failure) -> Self.Element?",
+                        "type" : "method"
+                      }
+                    ],
+                    "path" : "\/documentation\/filestreamer\/filestream\/asynciterator\/asynciteratorprotocol-implementations",
+                    "title" : "AsyncIteratorProtocol Implementations",
+                    "type" : "symbol"
                   }
                 ],
                 "path" : "\/documentation\/filestreamer\/filestream\/asynciterator",
@@ -60,7 +93,7 @@
                   },
                   {
                     "path" : "\/documentation\/filestreamer\/filestream\/failurebehavior\/custom(_:)",
-                    "title" : "static func custom((any Error) throws -> ()) -> FileStream<Value>.FailureBehavior",
+                    "title" : "static func custom((any Error) throws(FileStream<Value>.Failure) -> ()) -> FileStream<Value>.FailureBehavior",
                     "type" : "method"
                   }
                 ],
@@ -93,6 +126,11 @@
               {
                 "path" : "\/documentation\/filestreamer\/filestream\/element",
                 "title" : "FileStream.Element",
+                "type" : "typealias"
+              },
+              {
+                "path" : "\/documentation\/filestreamer\/filestream\/failure",
+                "title" : "FileStream.Failure",
                 "type" : "typealias"
               },
               {
@@ -151,13 +189,23 @@
                     "type" : "method"
                   },
                   {
-                    "path" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-63jd2",
+                    "path" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-3sfwa",
+                    "title" : "func flatMap<SegmentOfResult>((Self.Element) async -> SegmentOfResult) -> AsyncFlatMapSequence<Self, SegmentOfResult>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-4xbq6",
                     "title" : "func flatMap<SegmentOfResult>((Self.Element) async -> SegmentOfResult) -> AsyncFlatMapSequence<Self, SegmentOfResult>",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-81gg2",
                     "title" : "func flatMap<SegmentOfResult>((Self.Element) async throws -> SegmentOfResult) -> AsyncThrowingFlatMapSequence<Self, SegmentOfResult>",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/filestreamer\/filestream\/flatmap(_:)-9tzwp",
+                    "title" : "func flatMap<SegmentOfResult>((Self.Element) async -> SegmentOfResult) -> AsyncFlatMapSequence<Self, SegmentOfResult>",
                     "type" : "method"
                   },
                   {
@@ -230,6 +278,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 1
+    "patch" : 2
   }
 }

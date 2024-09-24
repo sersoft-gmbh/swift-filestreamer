@@ -61,7 +61,33 @@
       },
       {
         "kind" : "text",
-        "text" : " -> ()) -> "
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+        "text" : "FileStream"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Value"
+      },
+      {
+        "kind" : "text",
+        "text" : ">."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
+        "text" : "Failure"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> ()) -> "
       },
       {
         "kind" : "typeIdentifier",
@@ -93,7 +119,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L17"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L29"
     },
     "role" : "symbol",
     "roleHeading" : "Type Method",
@@ -174,7 +200,35 @@
             },
             {
               "kind" : "text",
-              "text" : " -> ()) -> "
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+              "text" : "FileStream"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">."
+            },
+            {
+              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> ()) -> "
             },
             {
               "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
@@ -281,6 +335,37 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream"
 },
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Failure": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Failure",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/failure"
+},
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
   "abstract" : [
     {
@@ -362,7 +447,33 @@
     },
     {
       "kind" : "text",
-      "text" : " -> ()) -> "
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
+      "text" : "FileStream"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
+      "text" : "Failure"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ()) -> "
     },
     {
       "kind" : "typeIdentifier",

@@ -82,7 +82,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L54"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L81"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",

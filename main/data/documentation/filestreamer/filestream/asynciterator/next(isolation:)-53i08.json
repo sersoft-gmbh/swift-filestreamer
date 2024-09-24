@@ -1,0 +1,566 @@
+{
+  "abstract" : [
+    {
+      "text" : "Default implementation of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in terms of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which is",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "required to maintain backward compatibility with existing async iterators.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-53i08"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "_Concurrency",
+    "externalID" : "s:ScI12_ConcurrencyE4next9isolation7ElementQzSgScA_pSgYi_tYa7FailureQzYKF::SYNTHESIZED::s:12FileStreamer0A6StreamV13AsyncIteratorV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "next"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isolation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "isolated"
+      },
+      {
+        "kind" : "text",
+        "text" : " (any "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScA",
+        "text" : "Actor"
+      },
+      {
+        "kind" : "text",
+        "text" : ")?) "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScI7FailureQa",
+        "text" : "Failure"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScI7ElementQa",
+        "text" : "Element"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FileStreamer",
+        "relatedModules" : [
+          "_Concurrency"
+        ]
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "2.0",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "11.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "next(isolation:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "mutating"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "next"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "isolation"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "actor"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "isolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " (any "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScA",
+              "text" : "Actor"
+            },
+            {
+              "kind" : "text",
+              "text" : ")?) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScI7FailureQa",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScI7ElementQa",
+              "text" : "Element"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-53i08"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://FileStreamer/documentation/FileStreamer": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FileStreamer",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream": {
+  "abstract" : [
+    {
+      "text" : "An async sequence that continously streams the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Value",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AsyncIterator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.AsyncIterator",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/AsyncIteratorProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "AsyncIteratorProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/asynciteratorprotocol-implementations"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next(isolation:)-53i08": {
+  "abstract" : [
+    {
+      "text" : "Default implementation of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in terms of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which is",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "required to maintain backward compatibility with existing async iterators.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "next"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "isolation"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "isolated"
+    },
+    {
+      "kind" : "text",
+      "text" : " (any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScA",
+      "text" : "Actor"
+    },
+    {
+      "kind" : "text",
+      "text" : ")?) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScI7FailureQa",
+      "text" : "Failure"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScI7ElementQa",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-53i08",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "next(isolation:)",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-53i08"
+}
+}
+}

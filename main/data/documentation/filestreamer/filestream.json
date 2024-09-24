@@ -123,6 +123,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior"
@@ -130,24 +132,32 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)"
       ],
       "title" : "Initializers"
     },
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()"
       ],
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Element"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Element",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure"
       ],
       "title" : "Type Aliases"
     },
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncSequence-Implementations"
@@ -299,6 +309,37 @@
   "title" : "FileStream.Element",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/element"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/Failure": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.Failure",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/failure"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
   "abstract" : [

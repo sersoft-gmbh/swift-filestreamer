@@ -41,7 +41,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L34"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L52"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -105,16 +105,30 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-80ms"
       ],
       "title" : "Instance Methods"
     },
     {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
       "identifiers" : [
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/Element"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/Element",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/Failure"
       ],
       "title" : "Type Aliases"
+    },
+    {
+      "anchor" : "Default-Implementations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
     }
   ],
   "variants" : [
@@ -220,6 +234,17 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
 },
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/AsyncIteratorProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "AsyncIteratorProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/asynciteratorprotocol-implementations"
+},
 "doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/Element": {
   "abstract" : [
 
@@ -250,6 +275,37 @@
   "title" : "FileStream.AsyncIterator.Element",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/element"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/Failure": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/Failure",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Failure"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.AsyncIterator.Failure",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/failure"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next()": {
   "abstract" : [
@@ -329,6 +385,84 @@
   "title" : "next()",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next()"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next(isolation:)-80ms": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "next"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "isolation"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "isolated"
+    },
+    {
+      "kind" : "text",
+      "text" : " (any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScA",
+      "text" : "Actor"
+    },
+    {
+      "kind" : "text",
+      "text" : ")?) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-80ms",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "next(isolation:)",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-80ms"
 }
 }
 }
