@@ -1,3 +1,6 @@
+#if swift(>=6.0) // Currently fails to build otherwise
+fileprivate import Foundation
+#endif
 fileprivate import Dispatch
 public import SystemPackage
 
@@ -97,7 +100,7 @@ extension FileStream {
                                            using cont: Stream.Continuation,
                                            handlingFailuresWith failureBehavior: FailureBehavior) {
         let source = _inactiveSource(from: fileDescriptor) {
-            cont.yield($0.value)
+            cont.yield($0)
         } onFailure: {
             do {
                 try failureBehavior.handleError($0)
@@ -122,14 +125,26 @@ fileprivate struct SendableDispatchSource: @unchecked Sendable {
     }
 }
 
-fileprivate struct UncheckedSendable<T>: @unchecked Sendable {
-    let value: T
-}
-
 extension FileStream {
+#if swift(>=6.0)
+    private typealias _ElementCallback = (sending Element) -> ()
+#else
+    private typealias _ElementCallback = (Element) -> ()
+#endif
+
     private static func _inactiveSource(from fileDesc: FileDescriptor,
-                                        onElement elementCallback: @escaping (UncheckedSendable<Element>) -> (),
+                                        onElement elementCallback: @escaping _ElementCallback,
                                         onFailure failureCallback: @escaping (any Error) -> ()) -> SendableDispatchSource {
+#if swift(>=6.0)
+        func send(_ value: sending Element, _: isolated (any Actor)? = #isolation) {
+            elementCallback(value)
+        }
+#else
+        func send(_ value: Element) {
+            elementCallback(value)
+        }
+#endif
+
         let workerQueue = DispatchQueue(label: "de.sersoft.filestreamer.filestream.gcd.worker")
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
         let rawSize = MemoryLayout<Value>.size
@@ -144,7 +159,7 @@ extension FileStream {
                 let bytesRead = try fileDesc.read(into: UnsafeMutableRawBufferPointer(buffer))
                 if case let noOfValues = bytesRead / rawSize, noOfValues > 0 {
                     for value in buffer.prefix(noOfValues) {
-                        elementCallback(.init(value: value))
+                        send(value)
                     }
                 }
                 let leftOverBytes = bytesRead % rawSize
