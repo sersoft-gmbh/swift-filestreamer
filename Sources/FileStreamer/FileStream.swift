@@ -136,14 +136,15 @@ extension FileStream {
                                         onElement elementCallback: @escaping _ElementCallback,
                                         onFailure failureCallback: @escaping (any Error) -> ()) -> SendableDispatchSource {
 #if swift(>=6.0)
-        func send(_ value: sending Element, _: isolated (any Actor)? = #isolation) {
-            elementCallback(value)
-        }
-#else
-        func send(_ value: Element) {
-            elementCallback(value)
-        }
+        let unsafeCallback = unsafeBitCast(elementCallback, to: ((Element) -> ()).self)
 #endif
+        func send(_ value: Element) {
+#if swift(>=6.0)
+            unsafeCallback(value)
+#else
+            elementCallback(value)
+#endif
+        }
 
         let workerQueue = DispatchQueue(label: "de.sersoft.filestreamer.filestream.gcd.worker")
         let source = DispatchSource.makeReadSource(fileDescriptor: fileDesc.rawValue, queue: workerQueue)
