@@ -12,7 +12,7 @@ permissions:
 jobs:
   variables:
     outputs:
-      max-supported-swift-version: '6.0'
+      max-supported-swift-version: '6.1'
       xcode-scheme: swift-filestreamer
       xcode-platform-version: latest
       fail-if-codecov-fails: 'true'
@@ -45,8 +45,7 @@ jobs:
           - iPadOS
           - tvOS
           - watchOS
-          # Waiting for a new release of swift-system
-          # - visionOS
+          - visionOS
         swift-version-offset: [ 0, 1, 2 ]
     uses: sersoft-gmbh/oss-common-actions/.github/workflows/swift-test-xcode.yml@main
     with:
