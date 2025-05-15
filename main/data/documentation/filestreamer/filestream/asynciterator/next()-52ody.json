@@ -1,4 +1,42 @@
 {
+  "abstract" : [
+    {
+      "text" : "Default implementation of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in terms of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next(isolation:)",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "is required to maintain backward compatibility with existing async",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "iterators.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -10,11 +48,12 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()"
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()-52ody"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12FileStreamer0A6StreamV13AsyncIteratorV4nextxSgyYaKF",
+    "extendedModule" : "_Concurrency",
+    "externalID" : "s:ScI12_ConcurrencyE4next7ElementQzSgyYa7FailureQzYKF::SYNTHESIZED::s:12FileStreamer0A6StreamV13AsyncIteratorV",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -46,29 +85,11 @@
       },
       {
         "kind" : "text",
-        "text" : " -> "
+        "text" : "("
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-        "text" : "FileStream"
-      },
-      {
-        "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "text" : "Value"
-      },
-      {
-        "kind" : "text",
-        "text" : ">."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-        "text" : "AsyncIterator"
+        "text" : "Self"
       },
       {
         "kind" : "text",
@@ -76,6 +97,24 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScI7FailureQa",
+        "text" : "Failure"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScI7ElementQa",
         "text" : "Element"
       },
       {
@@ -85,13 +124,49 @@
     ],
     "modules" : [
       {
-        "name" : "FileStreamer"
+        "name" : "FileStreamer",
+        "relatedModules" : [
+          "_Concurrency"
+        ]
       }
     ],
-    "remoteSource" : {
-      "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L68"
-    },
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "2.0",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "11.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
@@ -146,31 +221,11 @@
             },
             {
               "kind" : "text",
-              "text" : " -> "
-            },
-            {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-              "text" : "FileStream"
-            },
-            {
-              "kind" : "text",
-              "text" : "<"
+              "text" : "("
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Value"
-            },
-            {
-              "kind" : "text",
-              "text" : ">."
-            },
-            {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-              "text" : "AsyncIterator"
+              "text" : "Self"
             },
             {
               "kind" : "text",
@@ -178,6 +233,24 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScI7FailureQa",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScI7ElementQa",
               "text" : "Element"
             },
             {
@@ -201,7 +274,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/filestreamer\/filestream\/asynciterator\/next()"
+        "\/documentation\/filestreamer\/filestream\/asynciterator\/next()-52ody"
       ],
       "traits" : [
         {
@@ -296,9 +369,44 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next()": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next()-52ody": {
   "abstract" : [
-
+    {
+      "text" : "Default implementation of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next()",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in terms of ",
+      "type" : "text"
+    },
+    {
+      "code" : "next(isolation:)",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "is required to maintain backward compatibility with existing async",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "iterators.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -331,29 +439,11 @@
     },
     {
       "kind" : "text",
-      "text" : " -> "
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Value"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-      "text" : "AsyncIterator"
+      "text" : "Self"
     },
     {
       "kind" : "text",
@@ -361,6 +451,24 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScI7FailureQa",
+      "text" : "Failure"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScI7ElementQa",
       "text" : "Element"
     },
     {
@@ -368,12 +476,12 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next()-52ody",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "next()",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next()"
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next()-52ody"
 }
 }
 }

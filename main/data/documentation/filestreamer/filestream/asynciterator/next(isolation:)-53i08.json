@@ -5,7 +5,7 @@
       "type" : "text"
     },
     {
-      "code" : "next()",
+      "code" : "next(isolation:)",
       "type" : "codeVoice"
     },
     {
@@ -17,7 +17,7 @@
       "type" : "codeVoice"
     },
     {
-      "text" : ", which is",
+      "text" : ", which",
       "type" : "text"
     },
     {
@@ -25,7 +25,15 @@
       "type" : "text"
     },
     {
-      "text" : "required to maintain backward compatibility with existing async iterators.",
+      "text" : "is required to maintain backward compatibility with existing async",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "iterators.",
       "type" : "text"
     }
   ],
@@ -34,8 +42,7 @@
       [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer",
         "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator"
       ]
     ]
   },
@@ -420,17 +427,6 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/AsyncIteratorProtocol-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/AsyncIteratorProtocol-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "AsyncIteratorProtocol Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/asynciteratorprotocol-implementations"
-},
 "doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next(isolation:)-53i08": {
   "abstract" : [
     {
@@ -438,7 +434,7 @@
       "type" : "text"
     },
     {
-      "code" : "next()",
+      "code" : "next(isolation:)",
       "type" : "codeVoice"
     },
     {
@@ -450,7 +446,7 @@
       "type" : "codeVoice"
     },
     {
-      "text" : ", which is",
+      "text" : ", which",
       "type" : "text"
     },
     {
@@ -458,7 +454,15 @@
       "type" : "text"
     },
     {
-      "text" : "required to maintain backward compatibility with existing async iterators.",
+      "text" : "is required to maintain backward compatibility with existing async",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "iterators.",
       "type" : "text"
     }
   ],

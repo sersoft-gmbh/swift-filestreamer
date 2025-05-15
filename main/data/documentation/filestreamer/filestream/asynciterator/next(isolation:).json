@@ -10,7 +10,7 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-80ms"
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -126,7 +126,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L75"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L75"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -242,7 +242,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-80ms"
+        "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)"
       ],
       "traits" : [
         {
@@ -337,7 +337,7 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next(isolation:)-80ms": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator/next(isolation:)": {
   "abstract" : [
 
   ],
@@ -408,12 +408,12 @@
       "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)-80ms",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator\/next(isolation:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "next(isolation:)",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)-80ms"
+  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator\/next(isolation:)"
 }
 }
 }

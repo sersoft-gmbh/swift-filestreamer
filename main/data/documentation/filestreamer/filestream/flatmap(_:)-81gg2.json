@@ -25,8 +25,7 @@
     "paths" : [
       [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncSequence-Implementations"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream"
       ]
     ]
   },
@@ -728,17 +727,6 @@
   "title" : "FileStream",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream"
-},
-"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncSequence-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncSequence-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "AsyncSequence Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/asyncsequence-implementations"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/flatMap(_:)-81gg2": {
   "abstract" : [

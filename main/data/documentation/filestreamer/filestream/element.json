@@ -41,7 +41,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/Sources\/FileStreamer\/FileStream.swift#L9"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L9"
     },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
