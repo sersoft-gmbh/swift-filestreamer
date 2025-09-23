@@ -73,7 +73,12 @@ extension AnyAsyncStream where Failure == Never {
     }
 }
 
-protocol AsyncStreamTerminationReason<Failure>: Sendable {
+#if compiler(>=6.1)
+typealias AsyncStreamTerminationReasonBase = Sendable
+#else
+typealias AsyncStreamTerminationReasonBase = Any
+#endif
+protocol AsyncStreamTerminationReason<Failure>: AsyncStreamTerminationReasonBase {
     associatedtype Failure: Error
 
     static var cancelled: Self { get }
