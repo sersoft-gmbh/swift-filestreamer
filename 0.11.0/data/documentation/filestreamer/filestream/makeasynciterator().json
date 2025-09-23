@@ -1,0 +1,348 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:12FileStreamer0A6StreamV17makeAsyncIteratorQryF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "makeAsyncIterator"
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ScI",
+        "text" : "AsyncIteratorProtocol"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Element"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Failure"
+      },
+      {
+        "kind" : "text",
+        "text" : ">\n"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "FileStreamer"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "FileStream.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/tags\/0.11.0\/Sources\/FileStreamer\/FileStream.swift#L52"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "makeAsyncIterator()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "makeAsyncIterator"
+            },
+            {
+              "kind" : "text",
+              "text" : "() -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ScI",
+              "text" : "AsyncIteratorProtocol"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Element"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : ">\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/filestreamer\/filestream\/makeasynciterator()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://FileStreamer/documentation/FileStreamer": {
+  "abstract" : [
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FileStreamer",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream": {
+  "abstract" : [
+    {
+      "text" : "An async sequence that continously streams the generic ",
+      "type" : "text"
+    },
+    {
+      "code" : "Element",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileStream"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
+  "abstract" : [
+    {
+      "text" : "Defines how failures should be handled.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FailureBehavior"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FailureBehavior"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileStream.FailureBehavior",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior"
+},
+"doc://FileStreamer/documentation/FileStreamer/FileStream/makeAsyncIterator()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "makeAsyncIterator"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScI",
+      "text" : "AsyncIteratorProtocol"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Failure"
+    },
+    {
+      "kind" : "text",
+      "text" : ">\n"
+    }
+  ],
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "makeAsyncIterator()",
+  "type" : "topic",
+  "url" : "\/documentation\/filestreamer\/filestream\/makeasynciterator()"
+}
+}
+}
