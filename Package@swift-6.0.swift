@@ -12,11 +12,11 @@ let swiftSettings: Array<SwiftSetting> = [
 let package = Package(
     name: "swift-filestreamer",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
-        .tvOS(.v13),
-        .watchOS(.v6),
-        .visionOS(.v1),
+        .macOS(.v15),
+        .iOS(.v18),
+        .tvOS(.v17),
+        .watchOS(.v11),
+        .visionOS(.v2),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.

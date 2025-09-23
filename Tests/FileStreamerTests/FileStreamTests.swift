@@ -1,8 +1,10 @@
-import XCTest
+import Foundation
+import Testing
 import SystemPackage
 @testable import FileStreamer
 
-final class FileStreamTests: XCTestCase {
+@Suite
+struct FileStreamTests {
     private struct TestValue: Equatable, CustomStringConvertible {
         let bool: CBool
         let int: CInt
@@ -16,11 +18,17 @@ final class FileStreamTests: XCTestCase {
     private func withTemporaryDirectory(do work: (URL) async throws -> ()) async throws {
         let newSubdir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: newSubdir, withIntermediateDirectories: true)
-        try await work(newSubdir)
+        do {
+            try await work(newSubdir)
+        } catch {
+            try? FileManager.default.removeItem(at: newSubdir)
+            throw error
+        }
         try FileManager.default.removeItem(at: newSubdir)
     }
 
-    func testSimpleStreaming() async throws {
+    @Test
+    func simpleStreaming() async throws {
         final actor Coordinator {
             private(set) var shouldStartWriting = false
             private(set) var hasFinishedWriting = false
@@ -56,7 +64,7 @@ final class FileStreamTests: XCTestCase {
             let readingDesc = try FileDescriptor.open(file, .readOnly)
             let coordinator = Coordinator()
             let collectionTask = Task<(Array<TestValue>, Bool), any Error>.detached {
-                let seq = FileStream<TestValue>(fileDescriptor: readingDesc)
+                let seq = FileStream<TestValue, any Error>(fileDescriptor: readingDesc, failureBehavior: .throw)
                 var collectedEvents = Array<TestValue>()
                 var didReachEnd = false
                 await coordinator.readyForReceiving()
@@ -77,14 +85,12 @@ final class FileStreamTests: XCTestCase {
                     try await Task.sleep(nanoseconds: 100)
                 }
                 for var event in expectedEvents {
-                    do {
-                        try withUnsafeBytes(of: &event) {
-                            XCTAssertEqual(try writingDesc.write($0), MemoryLayout<TestValue>.size)
-                        }
-                        try await Task.sleep(nanoseconds: 10)
-                    } catch {
-                        XCTFail("writing failed: \(error)")
-                    }
+#if compiler(>=6.2)
+                    #expect(unsafe try withUnsafeBytes(of: &event) { unsafe try writingDesc.write($0) } == MemoryLayout<TestValue>.size)
+#else
+                    #expect(try withUnsafeBytes(of: &event) { try writingDesc.write($0) } == MemoryLayout<TestValue>.size)
+#endif
+                    try await Task.sleep(nanoseconds: 10)
                 }
                 await coordinator.didFinishWriting()
                 try writingDesc.close()
@@ -96,19 +102,19 @@ final class FileStreamTests: XCTestCase {
             }
             if await !coordinator.hasFinishedWriting {
                 writeTask.cancel()
-                XCTFail("Write didn't finish")
+                Issue.record("Write didn't finish")
             }
             try await writeTask.value
             if await !coordinator.hasFinishedReading {
                 collectionTask.cancel()
-                XCTFail("Read didn't finish")
+                Issue.record("Read didn't finish")
             }
             let (c, didReachEnd) = try await collectionTask.value
             collectedEvents = c
-            XCTAssertTrue(didReachEnd)
-            XCTAssertFalse(collectionTask.isCancelled)
+            #expect(didReachEnd)
+            #expect(!collectionTask.isCancelled)
             try readingDesc.close()
         }
-        XCTAssertEqual(collectedEvents, expectedEvents)
+        #expect(collectedEvents == expectedEvents)
     }
 }

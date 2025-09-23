@@ -1,22 +1,26 @@
-// swift-tools-version:6.1
+// swift-tools-version:6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let swiftSettings: Array<SwiftSetting> = [
     .swiftLanguageMode(.v6),
+    .strictMemorySafety(),
+    // Xcode 26.0 fails to build targets with dependencies having this enabled...
+    // .treatAllWarnings(as: .error),
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("InternalImportsByDefault"),
+    .enableUpcomingFeature("MemberImportVisibility"),
 ]
 
 let package = Package(
     name: "swift-filestreamer",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
-        .tvOS(.v13),
-        .watchOS(.v6),
-        .visionOS(.v1),
+        .macOS(.v15),
+        .iOS(.v18),
+        .tvOS(.v17),
+        .watchOS(.v11),
+        .visionOS(.v2),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
