@@ -86,7 +86,7 @@ extension FileStream {
     }
 }
 
-#if swift(>=6.2)
+#if swift(>=6.2) && canImport(Darwin)
 fileprivate typealias SendableDispatchSource = any DispatchSourceRead
 #else
 fileprivate struct SendableDispatchSource: @unchecked Sendable {
