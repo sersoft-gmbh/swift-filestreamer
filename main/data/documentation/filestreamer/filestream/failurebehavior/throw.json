@@ -20,7 +20,40 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12FileStreamer0A6StreamV15FailureBehaviorV5throwAEyx_GvpZ",
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Failure",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " is ",
+          "type" : "text"
+        },
+        {
+          "code" : "any Error",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "FileStreamer",
+    "externalID" : "s:12FileStreamer0A6StreamV15FailureBehaviorVAAs5Error_pRs_rlE5throwAEyxsAF_p_GvpZ",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -57,7 +90,16 @@
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Value"
+        "text" : "Element"
+      },
+      {
+        "kind" : "text",
+        "text" : ", any "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s5ErrorP",
+        "text" : "Error"
       },
       {
         "kind" : "text",
@@ -76,7 +118,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L43"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L59"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -130,7 +172,16 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Value"
+              "text" : "Element"
+            },
+            {
+              "kind" : "text",
+              "text" : ", any "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s5ErrorP",
+              "text" : "Error"
             },
             {
               "kind" : "text",
@@ -184,7 +235,10 @@
 "references": {
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
-
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
   "kind" : "symbol",
@@ -200,11 +254,36 @@
       "type" : "text"
     },
     {
-      "code" : "Value",
+      "code" : "Element",
       "type" : "codeVoice"
     },
     {
       "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
       "type" : "text"
     }
   ],
@@ -276,6 +355,38 @@
       "type" : "text"
     }
   ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Failure",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "any Error",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -312,7 +423,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5ErrorP",
+      "text" : "Error"
     },
     {
       "kind" : "text",

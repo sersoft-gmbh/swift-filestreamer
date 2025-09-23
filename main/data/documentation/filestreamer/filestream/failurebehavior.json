@@ -47,7 +47,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L13"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L9"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -86,7 +86,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/FileStreamer\/s8SendableP"
+        "doc:\/\/FileStreamer\/s8SendableP",
+        "doc:\/\/FileStreamer\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -136,7 +137,10 @@
 "references": {
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
-
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
   "kind" : "symbol",
@@ -152,11 +156,36 @@
       "type" : "text"
     },
     {
-      "code" : "Value",
+      "code" : "Element",
       "type" : "codeVoice"
     },
     {
       "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
       "type" : "text"
     }
   ],
@@ -272,24 +301,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Value"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
       "text" : "Failure"
     },
     {
@@ -307,7 +318,15 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Failure"
     },
     {
       "kind" : "text",
@@ -333,6 +352,38 @@
       "type" : "text"
     }
   ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Failure",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "Never",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -369,7 +420,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5NeverO",
+      "text" : "Never"
     },
     {
       "kind" : "text",
@@ -395,6 +455,38 @@
       "type" : "text"
     }
   ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Failure",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "any Error",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -431,7 +523,16 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5ErrorP",
+      "text" : "Error"
     },
     {
       "kind" : "text",
@@ -449,6 +550,11 @@
   "title" : "throw",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior\/throw"
+},
+"doc://FileStreamer/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/FileStreamer\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://FileStreamer/s8SendableP": {
   "identifier" : "doc:\/\/FileStreamer\/s8SendableP",

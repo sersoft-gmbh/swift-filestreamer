@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12FileStreamer0A6StreamV15FailureBehaviorV6customyAEyx_Gys5Error_pYbKcFZ",
+    "externalID" : "s:12FileStreamer0A6StreamV15FailureBehaviorV6customyAEyxq__Gys5Error_pYbq_YKcFZ",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -65,24 +65,6 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-        "text" : "FileStream"
-      },
-      {
-        "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "text" : "Value"
-      },
-      {
-        "kind" : "text",
-        "text" : ">."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
         "text" : "Failure"
       },
       {
@@ -100,7 +82,15 @@
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Value"
+        "text" : "Element"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Failure"
       },
       {
         "kind" : "text",
@@ -119,7 +109,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L32"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L17"
     },
     "role" : "symbol",
     "roleHeading" : "Type Method",
@@ -178,12 +168,12 @@
               "text" : ": "
             },
             {
-              "kind" : "keyword",
-              "text" : "@escaping"
+              "kind" : "attribute",
+              "text" : "@escaping "
             },
             {
               "kind" : "text",
-              "text" : " (any "
+              "text" : "(any "
             },
             {
               "kind" : "typeIdentifier",
@@ -203,27 +193,7 @@
               "text" : "("
             },
             {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-              "text" : "FileStream"
-            },
-            {
-              "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Value"
-            },
-            {
-              "kind" : "text",
-              "text" : ">."
-            },
-            {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
               "text" : "Failure"
             },
             {
@@ -242,7 +212,15 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Value"
+              "text" : "Element"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Failure"
             },
             {
               "kind" : "text",
@@ -284,7 +262,10 @@
 "references": {
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
-
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
   "kind" : "symbol",
@@ -300,11 +281,36 @@
       "type" : "text"
     },
     {
-      "code" : "Value",
+      "code" : "Element",
       "type" : "codeVoice"
     },
     {
       "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
       "type" : "text"
     }
   ],
@@ -334,37 +340,6 @@
   "title" : "FileStream",
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream"
-},
-"doc://FileStreamer/documentation/FileStreamer/FileStream/Failure": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "typealias"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "Failure"
-    }
-  ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/Failure",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "Failure"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "FileStream.Failure",
-  "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/failure"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
   "abstract" : [
@@ -451,24 +426,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Value"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failurea",
       "text" : "Failure"
     },
     {
@@ -486,7 +443,15 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Failure"
     },
     {
       "kind" : "text",

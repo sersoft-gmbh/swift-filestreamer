@@ -1,7 +1,31 @@
 {
   "abstract" : [
     {
-      "text" : "Errors are simply printed. The sequence will continue afterwards.",
+      "text" : "Creates a new file stream for the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "fileDescriptor",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "failureBehavior",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " defines how errors are handled.",
       "type" : "text"
     }
   ],
@@ -9,71 +33,46 @@
     "paths" : [
       [
         "doc:\/\/FileStreamer\/documentation\/FileStreamer",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
-        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior"
+        "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior\/print"
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)-5pi2n"
   },
   "kind" : "symbol",
   "metadata" : {
-    "conformance" : {
-      "availabilityPrefix" : [
-        {
-          "text" : "Available when",
-          "type" : "text"
-        }
-      ],
-      "conformancePrefix" : [
-        {
-          "text" : "Conforms when",
-          "type" : "text"
-        }
-      ],
-      "constraints" : [
-        {
-          "code" : "Failure",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " is ",
-          "type" : "text"
-        },
-        {
-          "code" : "Never",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : ".",
-          "type" : "text"
-        }
-      ]
-    },
-    "extendedModule" : "FileStreamer",
-    "externalID" : "s:12FileStreamer0A6StreamV15FailureBehaviorVAAs5NeverORs_rlE5printAEyxAG_GvpZ",
+    "externalID" : "s:12FileStreamer0A6StreamV14fileDescriptor15failureBehaviorACyxs5Error_pG13SystemPackage0aE0V_AC07FailureG0VyxsAF_p_GtcsAF_pRs_rlufc",
     "fragments" : [
       {
-        "kind" : "keyword",
-        "text" : "static"
-      },
-      {
-        "kind" : "text",
-        "text" : " "
-      },
-      {
-        "kind" : "keyword",
-        "text" : "var"
-      },
-      {
-        "kind" : "text",
-        "text" : " "
-      },
-      {
         "kind" : "identifier",
-        "text" : "print"
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "fileDescriptor"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
+        "text" : "FileDescriptor"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "failureBehavior"
       },
       {
         "kind" : "text",
@@ -98,8 +97,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:s5NeverO",
-        "text" : "Never"
+        "text" : "Failure"
       },
       {
         "kind" : "text",
@@ -109,6 +107,10 @@
         "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
         "text" : "FailureBehavior"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
       }
     ],
     "modules" : [
@@ -118,12 +120,12 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L64"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L43"
     },
     "role" : "symbol",
-    "roleHeading" : "Type Property",
-    "symbolKind" : "property",
-    "title" : "print"
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(fileDescriptor:failureBehavior:)"
   },
   "primaryContentSections" : [
     {
@@ -138,23 +140,32 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "static"
+              "text" : "init"
             },
             {
               "kind" : "text",
-              "text" : " "
+              "text" : "("
             },
             {
-              "kind" : "keyword",
-              "text" : "var"
+              "kind" : "externalParam",
+              "text" : "fileDescriptor"
             },
             {
               "kind" : "text",
-              "text" : " "
+              "text" : ": "
             },
             {
-              "kind" : "identifier",
-              "text" : "print"
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
+              "text" : "FileDescriptor"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "failureBehavior"
             },
             {
               "kind" : "text",
@@ -180,8 +191,7 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:s5NeverO",
-              "text" : "Never"
+              "text" : "Failure"
             },
             {
               "kind" : "text",
@@ -195,20 +205,66 @@
             },
             {
               "kind" : "text",
-              "text" : " { "
+              "text" : ") "
             },
             {
               "kind" : "keyword",
-              "text" : "get"
+              "text" : "where"
             },
             {
               "kind" : "text",
-              "text" : " }"
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : " == any "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s5ErrorP",
+              "text" : "Error"
             }
           ]
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The file descriptor to stream from.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "fileDescriptor"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "How to handle failures of the underlying stream.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "failureBehavior"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -222,7 +278,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/filestreamer\/filestream\/failurebehavior\/print"
+        "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)-5pi2n"
       ],
       "traits" : [
         {
@@ -348,65 +404,66 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior/print": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:failureBehavior:)-5pi2n": {
   "abstract" : [
     {
-      "text" : "Errors are simply printed. The sequence will continue afterwards.",
+      "text" : "Creates a new file stream for the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "fileDescriptor",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "failureBehavior",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " defines how errors are handled.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "Failure",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " is ",
-        "type" : "text"
-      },
-      {
-        "code" : "Never",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
-      "kind" : "keyword",
-      "text" : "static"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
       "kind" : "identifier",
-      "text" : "print"
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "fileDescriptor"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:13SystemPackage14FileDescriptorV",
+      "text" : "FileDescriptor"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "failureBehavior"
     },
     {
       "kind" : "text",
@@ -431,8 +488,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s5NeverO",
-      "text" : "Never"
+      "text" : "Failure"
     },
     {
       "kind" : "text",
@@ -442,14 +498,18 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
       "text" : "FailureBehavior"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior\/print",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)-5pi2n",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "print",
+  "title" : "init(fileDescriptor:failureBehavior:)",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior\/print"
+  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)-5pi2n"
 }
 }
 }

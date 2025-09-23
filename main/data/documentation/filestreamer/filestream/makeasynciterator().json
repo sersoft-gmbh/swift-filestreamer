@@ -13,7 +13,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12FileStreamer0A6StreamV17makeAsyncIteratorAC0eF0Vyx_GyF",
+    "externalID" : "s:12FileStreamer0A6StreamV17makeAsyncIteratorQryF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -32,9 +32,17 @@
         "text" : "() -> "
       },
       {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-        "text" : "FileStream"
+        "preciseIdentifier" : "s:ScI",
+        "text" : "AsyncIteratorProtocol"
       },
       {
         "kind" : "text",
@@ -42,16 +50,19 @@
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Value"
+        "text" : "Element"
       },
       {
         "kind" : "text",
-        "text" : ">."
+        "text" : ", "
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-        "text" : "AsyncIterator"
+        "text" : "Failure"
+      },
+      {
+        "kind" : "text",
+        "text" : ">\n"
       }
     ],
     "modules" : [
@@ -61,7 +72,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L91"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L52"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -96,10 +107,17 @@
               "text" : "() -> "
             },
             {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-              "text" : "FileStream"
+              "preciseIdentifier" : "s:ScI",
+              "text" : "AsyncIteratorProtocol"
             },
             {
               "kind" : "text",
@@ -107,17 +125,19 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Value"
+              "text" : "Element"
             },
             {
               "kind" : "text",
-              "text" : ">."
+              "text" : ", "
             },
             {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-              "text" : "AsyncIterator"
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : ">\n"
             }
           ]
         }
@@ -149,7 +169,10 @@
 "references": {
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
-
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
   "kind" : "symbol",
@@ -165,11 +188,36 @@
       "type" : "text"
     },
     {
-      "code" : "Value",
+      "code" : "Element",
       "type" : "codeVoice"
     },
     {
       "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
       "type" : "text"
     }
   ],
@@ -200,9 +248,12 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/AsyncIterator": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/FailureBehavior": {
   "abstract" : [
-
+    {
+      "text" : "Defines how failures should be handled.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -215,21 +266,21 @@
     },
     {
       "kind" : "identifier",
-      "text" : "AsyncIterator"
+      "text" : "FailureBehavior"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/AsyncIterator",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "AsyncIterator"
+      "text" : "FailureBehavior"
     }
   ],
   "role" : "symbol",
-  "title" : "FileStream.AsyncIterator",
+  "title" : "FileStream.FailureBehavior",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/asynciterator"
+  "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior"
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/makeAsyncIterator()": {
   "abstract" : [
@@ -253,9 +304,17 @@
       "text" : "() -> "
     },
     {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
+      "preciseIdentifier" : "s:ScI",
+      "text" : "AsyncIteratorProtocol"
     },
     {
       "kind" : "text",
@@ -263,16 +322,19 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
     },
     {
       "kind" : "text",
-      "text" : ">."
+      "text" : ", "
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV13AsyncIteratorV",
-      "text" : "AsyncIterator"
+      "text" : "Failure"
+    },
+    {
+      "kind" : "text",
+      "text" : ">\n"
     }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/makeAsyncIterator()",

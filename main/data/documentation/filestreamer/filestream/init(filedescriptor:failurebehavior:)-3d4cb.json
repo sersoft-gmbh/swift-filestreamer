@@ -1,4 +1,34 @@
 {
+  "abstract" : [
+    {
+      "text" : "Creates a new file stream for the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "fileDescriptor",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "failureBehavior",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " defines how errors are handled.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -9,11 +39,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)"
+    "url" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)-3d4cb"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:12FileStreamer0A6StreamV14fileDescriptor15failureBehaviorACyxG13SystemPackage0aE0V_AC07FailureG0Vyx_Gtcfc",
+    "externalID" : "s:12FileStreamer0A6StreamV14fileDescriptor15failureBehaviorACyxs5NeverOG13SystemPackage0aE0V_AC07FailureG0VyxAG_GtcAGRs_rlufc",
     "fragments" : [
       {
         "kind" : "identifier",
@@ -59,7 +89,15 @@
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Value"
+        "text" : "Element"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Failure"
       },
       {
         "kind" : "text",
@@ -82,7 +120,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileStream.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L84"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/swift-filestreamer\/blob\/refs\/heads\/main\/Sources\/FileStreamer\/FileStream.swift#L30"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -145,7 +183,15 @@
             },
             {
               "kind" : "typeIdentifier",
-              "text" : "Value"
+              "text" : "Element"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Failure"
             },
             {
               "kind" : "text",
@@ -159,12 +205,66 @@
             },
             {
               "kind" : "text",
-              "text" : " = .`throw`)"
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Failure"
+            },
+            {
+              "kind" : "text",
+              "text" : " == "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s5NeverO",
+              "text" : "Never"
             }
           ]
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The file descriptor to stream from.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "fileDescriptor"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "How to handle failures of the underlying stream.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "failureBehavior"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -178,7 +278,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)"
+        "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)-3d4cb"
       ],
       "traits" : [
         {
@@ -191,7 +291,10 @@
 "references": {
 "doc://FileStreamer/documentation/FileStreamer": {
   "abstract" : [
-
+    {
+      "text" : "A simple file streaming implementation in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer",
   "kind" : "symbol",
@@ -207,11 +310,36 @@
       "type" : "text"
     },
     {
-      "code" : "Value",
+      "code" : "Element",
       "type" : "codeVoice"
     },
     {
       "text" : " type from a given file.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "Failure",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " type describes the errors thrown for the sequence. The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " is used to handle errors.",
       "type" : "text"
     }
   ],
@@ -276,9 +404,36 @@
   "type" : "topic",
   "url" : "\/documentation\/filestreamer\/filestream\/failurebehavior"
 },
-"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:failureBehavior:)": {
+"doc://FileStreamer/documentation/FileStreamer/FileStream/init(fileDescriptor:failureBehavior:)-3d4cb": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new file stream for the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "fileDescriptor",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "code" : "failureBehavior",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " defines how errors are handled.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -325,7 +480,15 @@
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Value"
+      "text" : "Element"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Failure"
     },
     {
       "kind" : "text",
@@ -341,12 +504,12 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)",
+  "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/init(fileDescriptor:failureBehavior:)-3d4cb",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "init(fileDescriptor:failureBehavior:)",
   "type" : "topic",
-  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)"
+  "url" : "\/documentation\/filestreamer\/filestream\/init(filedescriptor:failurebehavior:)-3d4cb"
 }
 }
 }
