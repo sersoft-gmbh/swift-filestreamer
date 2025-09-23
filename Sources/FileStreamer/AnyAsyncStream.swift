@@ -87,7 +87,7 @@ protocol AsyncStreamTerminationReason<Failure>: AsyncStreamTerminationReasonBase
 extension AsyncStream.Continuation.Termination: AsyncStreamTerminationReason {
     typealias Failure = Never
 
-    static func finished(_ failure: Failure?) -> AsyncStream<Element>.Continuation.Termination { .finished }
+    static func finished(_ failure: Failure?) -> Self { .finished }
 }
 extension AsyncThrowingStream.Continuation.Termination: AsyncStreamTerminationReason {}
 
@@ -111,6 +111,6 @@ protocol AsyncStreamContinuation<Element, Failure>: Sendable {
 extension AsyncStream.Continuation: AsyncStreamContinuation {
     typealias Failure = Never
 
-    func finish(throwing error: Never?) { finish() }
+    func finish(throwing error: Failure?) { finish() }
 }
 extension AsyncThrowingStream.Continuation: AsyncStreamContinuation {}

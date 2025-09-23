@@ -159,10 +159,10 @@ extension FileStream {
                 failureCallback(error)
             }
         }
-#if swift(<6.2)
-        return .init(source: source)
-#else
+#if swift(>=6.2) && canImport(Darwin)
         return source
+#else
+        return .init(source: source)
 #endif
     }
 }
