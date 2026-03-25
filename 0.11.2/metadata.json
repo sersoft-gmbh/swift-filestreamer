@@ -1,0 +1,9 @@
+{
+  "bundleDisplayName" : "FileStreamer",
+  "bundleID" : "FileStreamer",
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 0
+  }
+}
