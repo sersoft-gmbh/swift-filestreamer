@@ -572,7 +572,18 @@
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/makeAsyncIterator()": {
   "abstract" : [
-
+    {
+      "text" : "Creates the asynchronous iterator that produces elements of this",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "asynchronous sequence.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

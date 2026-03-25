@@ -172,8 +172,12 @@
               "text" : "@escaping "
             },
             {
+              "kind" : "attribute",
+              "text" : "@Sendable"
+            },
+            {
               "kind" : "text",
-              "text" : "(any "
+              "text" : " (any "
             },
             {
               "kind" : "typeIdentifier",
