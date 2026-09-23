@@ -14,6 +14,7 @@ struct AnyAsyncStream<Element, Failure: Error>: AsyncSequence {
         case nonThrowing(AsyncStream<Element>.Iterator)
         case throwing(AsyncThrowingStream<Element, Failure>.Iterator)
 
+#if swift(<6.2)
         @inlinable
         mutating func next() async throws -> Element? {
             switch self {
@@ -25,6 +26,7 @@ struct AnyAsyncStream<Element, Failure: Error>: AsyncSequence {
                 return try await iterator.next()
             }
         }
+#endif
 
         @inlinable
         mutating func next(isolation actor: isolated (any Actor)?) async throws(Failure) -> Element? {
@@ -73,12 +75,7 @@ extension AnyAsyncStream where Failure == Never {
     }
 }
 
-#if compiler(>=6.1)
-typealias AsyncStreamTerminationReasonBase = Sendable
-#else
-typealias AsyncStreamTerminationReasonBase = Any
-#endif
-protocol AsyncStreamTerminationReason<Failure>: AsyncStreamTerminationReasonBase {
+protocol AsyncStreamTerminationReason<Failure>: Sendable {
     associatedtype Failure: Error
 
     static var cancelled: Self { get }
