@@ -77,38 +77,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-        "text" : "FileStream"
-      },
-      {
-        "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "typeIdentifier",
-        "text" : "Element"
-      },
-      {
-        "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:s5NeverO",
-        "text" : "Never"
-      },
-      {
-        "kind" : "text",
-        "text" : ">."
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
-        "text" : "FailureBehavior"
+        "text" : ": `Self`"
       }
     ],
     "modules" : [
@@ -158,40 +127,7 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-              "text" : "FileStream"
-            },
-            {
-              "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Element"
-            },
-            {
-              "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:s5NeverO",
-              "text" : "Never"
-            },
-            {
-              "kind" : "text",
-              "text" : ">."
-            },
-            {
-              "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
-              "text" : "FailureBehavior"
+              "text" : ": `Self`"
             },
             {
               "kind" : "text",
@@ -410,38 +346,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s5NeverO",
-      "text" : "Never"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
-      "text" : "FailureBehavior"
+      "text" : ": `Self`"
     }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior\/print",

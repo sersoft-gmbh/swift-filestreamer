@@ -280,7 +280,23 @@
     },
     {
       "kind" : "text",
-      "text" : "((any "
+      "text" : "("
+    },
+    {
+      "kind" : "attribute",
+      "text" : "@Sendable"
+    },
+    {
+      "kind" : "text",
+      "text" : " ("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -301,6 +317,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failureq_mfp",
       "text" : "Failure"
     },
     {
@@ -407,38 +424,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s5NeverO",
-      "text" : "Never"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
-      "text" : "FailureBehavior"
+      "text" : ": `Self`"
     }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior\/print",
@@ -510,38 +496,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ", any "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:s5ErrorP",
-      "text" : "Error"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
-      "text" : "FailureBehavior"
+      "text" : ": `Self`"
     }
   ],
   "identifier" : "doc:\/\/FileStreamer\/documentation\/FileStreamer\/FileStream\/FailureBehavior\/throw",

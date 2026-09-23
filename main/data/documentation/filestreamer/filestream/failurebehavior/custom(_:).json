@@ -44,7 +44,23 @@
       },
       {
         "kind" : "text",
-        "text" : "((any "
+        "text" : "("
+      },
+      {
+        "kind" : "attribute",
+        "text" : "@Sendable"
+      },
+      {
+        "kind" : "text",
+        "text" : " ("
+      },
+      {
+        "kind" : "keyword",
+        "text" : "any"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -65,6 +81,7 @@
       },
       {
         "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failureq_mfp",
         "text" : "Failure"
       },
       {
@@ -169,7 +186,11 @@
             },
             {
               "kind" : "attribute",
-              "text" : "@escaping "
+              "text" : "@escaping"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "attribute",
@@ -177,7 +198,15 @@
             },
             {
               "kind" : "text",
-              "text" : " (any "
+              "text" : " ("
+            },
+            {
+              "kind" : "keyword",
+              "text" : "any"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "typeIdentifier",
@@ -198,6 +227,7 @@
             },
             {
               "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failureq_mfp",
               "text" : "Failure"
             },
             {
@@ -409,7 +439,23 @@
     },
     {
       "kind" : "text",
-      "text" : "((any "
+      "text" : "("
+    },
+    {
+      "kind" : "attribute",
+      "text" : "@Sendable"
+    },
+    {
+      "kind" : "text",
+      "text" : " ("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -430,6 +476,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failureq_mfp",
       "text" : "Failure"
     },
     {

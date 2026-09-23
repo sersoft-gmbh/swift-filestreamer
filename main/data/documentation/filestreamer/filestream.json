@@ -423,31 +423,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Failure"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
       "text" : "FailureBehavior"
     },
@@ -530,31 +505,6 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12FileStreamer0A6StreamV",
-      "text" : "FileStream"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Element"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Failure"
-    },
-    {
-      "kind" : "text",
-      "text" : ">."
-    },
-    {
-      "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:12FileStreamer0A6StreamV15FailureBehaviorV",
       "text" : "FailureBehavior"
     },
@@ -572,18 +522,7 @@
 },
 "doc://FileStreamer/documentation/FileStreamer/FileStream/makeAsyncIterator()": {
   "abstract" : [
-    {
-      "text" : "Creates the asynchronous iterator that produces elements of this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "asynchronous sequence.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -621,6 +560,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Elementxmfp",
       "text" : "Element"
     },
     {
@@ -629,6 +569,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:12FileStreamer0A6StreamV7Failureq_mfp",
       "text" : "Failure"
     },
     {
