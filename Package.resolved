@@ -1,5 +1,5 @@
 {
-  "originHash" : "f1a6bc45072f6a19f3c59aa88287b98ab6b6515b3af6e0c29e9e9ba48881a082",
+  "originHash" : "282ec0b907de5c5c98c2b8b78f843324d3b83adcc7c8b44f89a79bee3c8bddc7",
   "pins" : [
     {
       "identity" : "swift-docc-plugin",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system",
       "state" : {
-        "revision" : "869129b7bf4ecc57b97d0193ad29690ca2134750",
-        "version" : "1.8.1"
+        "revision" : "640e5755b5826f4437eaeedd366fd776737db62c",
+        "version" : "1.9.0"
       }
     }
   ],
